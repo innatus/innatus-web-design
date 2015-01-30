@@ -1,0 +1,235 @@
+/*------------------------------------*\
+	PROJECT TITLE
+\*------------------------------------*/
+
+body, html {
+	height: 100%;
+	font-family: 'Roboto', sans-serif;
+	position: relative;
+}
+
+/* MODULAR
+-----------------------------------------*/
+
+a,
+a:hover,
+a:focus,
+a:visited {
+	text-decoration: none;
+	outline: none;
+}
+
+.wrapper {
+	max-width: 1200px;
+	width: 100%;
+	margin-right: auto;
+	margin-left: auto;
+	padding-right: 20px;
+	padding-left: 20px;
+}
+
+.wrapper.minwrapper {
+	max-width: 800px;
+}
+
+.fixed {
+	position: fixed;
+}
+
+.background {
+	position: relative;
+	height: 450px;
+	max-height: 450px;
+	background: #b3b3b3 url(../imgs/hbg.png) center bottom no-repeat;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+
+	-webkit-transition: all 0.4s ease 0s;
+	transition: all 0.4s ease 0s;
+}
+
+.navbar {
+	position: relative;
+	top: 0;
+	width: 100%;
+	padding-top: 20px;
+	padding-bottom: 20px;
+
+	background-color: #fff;
+	box-shadow: 0 2px 15px rgba(0,0,0,0.3);
+	-moz-box-shadow: 0 2px 15px rgba(0,0,0,0.3);
+	-o-box-shadow: 0 2px 15px rgba(0,0,0,0.3);
+
+	z-index: 999;
+}
+
+.navbar span {
+	font-size: 25px;
+}
+
+section {
+	position: relative;
+	z-index: 1;
+}
+
+/* NAV
+-----------------------------------------*/
+
+.labels {
+	display: block;
+	float: left;
+	min-width: 30px;
+	max-width: 100px;
+	padding: 5px 10px;
+	margin-left: 20px;
+	margin-top: 12px;
+	
+	background-color: #b3b3b3;
+	
+	color: #fff;
+	font-size: 10px;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+
+.acronym,
+.courseTitle {
+	float: left;
+}
+
+.price {
+	float: right;
+	color: #ff593d;
+	font-weight: 700;s
+}
+
+.price a {
+	margin-left: 10px;
+
+	color: #b3b3b3;
+	font-size: 12px;
+	text-transform: uppercase;
+	vertical-align: middle;
+}
+
+.acronym,
+.courseTitle,
+.price {
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+.acronym {
+	padding: 10px 20px;
+	background-color: #ff593d;
+	border-radius: 50px;
+	color: #fff;
+	font-weight: 700;
+}
+
+.courseTitle {
+	margin-left: 10px;
+	color: #424854;
+}
+
+/* EL MODULO
+-----------------------------------------*/
+
+.modulo {
+	background-color: #f6db4c;
+	padding-top: 100px;
+	padding-bottom: 100px;
+}
+
+.modulo p {
+	color: #424854;
+	font-size: 28px;
+	text-align: center;
+}
+
+.thumbs div {
+	float: left;
+
+	-webkit-background-size: cover;
+	background-size: cover;
+	
+	
+	width: 25%;
+	height: 250px;
+}
+
+.thumbA {
+	background: transparent url(../imgs/car5.png) center top no-repeat;
+}
+.thumbB{
+	background: transparent url(../imgs/car4.png) center top no-repeat;
+}
+.thumbC {
+	background: transparent url(../imgs/car2.png) center top no-repeat;
+}
+.thumbD {
+	background: transparent url(../imgs/car3.png) center top no-repeat;
+}
+
+.descContent > div div {
+	width: 50%;
+}
+
+.descContent > div:nth-child(even) .photo,
+.descContent > div:nth-child(odd) .description {
+	float: left;
+}
+
+.descContent > div:nth-child(even) .description,
+.descContent > div:nth-child(odd) .photo {
+	float: right;
+}
+
+.photo  {
+	height: 450px;
+	background: transparent url(../imgs/car.png) center center no-repeat;
+}
+
+.description {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	padding: 80px;
+}
+
+.description h2 {
+	font-size: 42px;
+	padding-bottom: 15px;
+}
+
+.description p {
+	font-size: 25px;
+}
+
+
+
+
+/* DESCRIPCION FOTOS
+-----------------------------------------*/
+
+
+
+/* STICKY FOOTER
+-----------------------------------------*/
+
+.page {
+	min-height: 100%;
+	height: auto !important;
+	height: 100%;
+	margin: 0 auto -250px;
+}
+
+footer, .push {
+	height: 250px;
+}
+
+footer {
+	background-color: rgba(0,0,0,0.5);
+}
