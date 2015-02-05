@@ -1,4 +1,10 @@
-// $(document).ready(function(){
+$(document).ready(function(){
+
+	$('.teacher div h1').on('click', function(){
+		$('.teacher-details').slideToggle('toggleSlide');
+	
+
+	});
 
 // 	blog();
 
@@ -15,7 +21,7 @@
 
 // $(window).resize(function(){
 // 	blog();
-// });
+});
 
 $(window).scroll(function(){
 	var scrollPos 		= $(this).scrollTop();
