@@ -1,24 +1,33 @@
 $(document).ready(function(){
 
-	$('.teacher div h1').on('click', function(){
+	$('.teacher h1, .teacher-details p i').on('click', function(){
 		$('.teacher-details').slideToggle('toggleSlide');
-	
-
 	});
 
 // 	blog();
 
-// 	$('#upTop').click(function(event){
-// 		event.preventDefault();
+	$('.acronym, .courseTitle').click(function(event){
+		event.preventDefault();
 
-// 		$('html, body').animate({
-// 			scrollTop: 0
-// 		}, 1000);
-// 	});
+		$('html, body').animate({
+			scrollTop: 0
+		}, 1000);
+	});
+
+	$('a[href^="#detalles"], a[href^="#second"]').on('click',function (e) {
+		e.preventDefault();
+
+		var target = this.hash;
+		$target = $(target);
+
+		$('html, body').stop().animate({
+			'scrollTop': $target.offset().top - 79
+		}, 900, 'swing', function () {
+//	        window.location.hash = target;
+		});
+	});
 
 	
-// });
-
 // $(window).resize(function(){
 // 	blog();
 });

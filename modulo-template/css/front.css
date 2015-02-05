@@ -6,6 +6,24 @@ body, html {
 	height: 100%;
 	font-family: 'Roboto', sans-serif;
 	position: relative;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.wrapper {
+	width: 100%;
+	max-width: 1200px;
+	margin-right: auto;
+	margin-left: auto;
+	padding-right: 20px;
+	padding-left: 20px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.wrapper.minwrapper {
+	max-width: 800px;
 }
 
 /* MODULAR
@@ -57,19 +75,6 @@ img {
 	border: none;
 }
 
-.wrapper {
-	max-width: 1200px;
-	width: 100%;
-	margin-right: auto;
-	margin-left: auto;
-	padding-right: 20px;
-	padding-left: 20px;
-}
-
-.wrapper.minwrapper {
-	max-width: 800px;
-}
-
 .fixed {
 	position: fixed;
 }
@@ -79,11 +84,14 @@ img {
 	height: 450px;
 	max-height: 450px;
 	background: #b3b3b3 url(../imgs/main-bg.png) center bottom no-repeat;
+	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
 	background-size: cover;
 
 	-webkit-transition: all 0.4s ease 0s;
+	-moz-transition: all 0.4s ease 0s;
+	-o-transition: all 0.4s ease 0s;
 	transition: all 0.4s ease 0s;
 }
 
@@ -137,6 +145,7 @@ section {
 .acronym,
 .courseTitle {
 	float: left;
+	cursor: pointer;
 }
 
 .price {
@@ -221,7 +230,7 @@ section {
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
-	padding: 80px;
+	padding: 70px;
 }
 
 /* HERRAMIENTAS
@@ -422,7 +431,13 @@ section {
 	background-color: #ececec;
 	border-radius: 5px;
 	font-size: 14px;
-	/*color: #a2a2a2;*/
+}
+
+.teacher-details p i {
+	display: block;
+	margin-top: 20px;
+	font-size: 30px;
+	cursor: pointer;
 }
 
 /* PRECIO Y ACLARACIONES
@@ -470,4 +485,91 @@ footer, .push {
 
 footer {
 	background-color: rgba(0,0,0,0.5);
+}
+
+
+/* RESPONSIVE
+-----------------------------------------*/
+
+@media screen and (max-width: 1024px) {
+	h2 {
+		font-size: 22px;
+		padding-bottom: 15px;
+	}
+
+	p,
+	ul li a,
+	ul li,
+	p a {
+		font-size: 18px;
+		line-height: 23px;
+	}
+
+	.background {
+		height: 350px;
+	}
+
+	.description-txt {
+		padding: 50px;
+	}
+
+	.modulo p {
+		line-height: 28px;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.thumbs img {
+		width: 50%;
+	}
+
+	.description-cont > div div {
+		width: 100%;
+	}
+}
+
+@media screen and (max-width: 640px) {
+	.navbar span {
+		font-size: 18px;
+	}
+
+	.courseTitle {
+		display: none;
+	}
+	
+	.profile,
+	.target,
+	.topics,
+	.legal {
+		width: 100%;
+		padding: 25px;
+	}
+
+	
+
+
+
+}
+
+@media screen and (max-width: 480px) {
+	.modulo p {
+		font-size: 22px;
+	}
+
+	.legal {
+		padding: 0;
+	}
+
+	.full-price h1 {
+		font-size: 60px;
+	}
+
+	.description-txt {
+		padding: 30px;
+	}
+}
+
+
+@media screen and (max-width: 320px) {
+	
 }
