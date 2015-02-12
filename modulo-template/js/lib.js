@@ -2,9 +2,20 @@ $(document).ready(function(){
 
 	$('.teacher h1, .teacher-details p i').on('click', function(){
 		$('.teacher-details').slideToggle('toggleSlide');
+		$('html, body').stop().animate({
+			'scrollTop': $('.teacher h1').offset().top - 120
+		}, 500, 'swing', function () {
+			//window.location.hash = target;
+		});
 	});
 
-// 	blog();
+	$('.teacher h1').on('click', function(){
+		$('.teacher h1 span').text('ver +');
+	});
+
+	$('.teacher-details p i').on('click', function(){
+		$('.teacher h1 span').text('ver +');
+	});
 
 	$('.acronym, .courseTitle').click(function(event){
 		event.preventDefault();
@@ -23,7 +34,7 @@ $(document).ready(function(){
 		$('html, body').stop().animate({
 			'scrollTop': $target.offset().top - 79
 		}, 900, 'swing', function () {
-//	        window.location.hash = target;
+			//window.location.hash = target;
 		});
 	});
 

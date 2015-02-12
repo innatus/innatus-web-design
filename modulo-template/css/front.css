@@ -298,7 +298,9 @@ section {
 	box-sizing: border-box;
 }
 
-.topics ul li {
+.topics ul li,
+.target ul li,
+.tools ul li {
 	list-style-type: disc;
 	margin-left: 20px;
 }
@@ -402,7 +404,7 @@ section {
 	cursor: pointer;
 }
 
-.teacher h1 i {
+.teacher h1 span {
 	font-size: 30px;
 	color: #b2b2b2;
 	-webkit-transition: all 0.2s ease 0s;
@@ -449,21 +451,35 @@ section {
 }
 .full-price p {
 	font-size: 20px;
+	margin-bottom: 10px;
 	color: #424854;
 	text-align: center;
+}
+
+.full-price p span {
+	display: block;
+	font-size: 16px;
 }
 
 .full-price h1 {
 	padding-top: 30px;
 	padding-bottom: 30px;
+	margin-top: 50px;
+	margin-bottom: 50px;
+	
+	border-top: 1px solid #B3B3B3;
+	border-bottom: 1px solid #B3B3B3;
+
+	/*color: #424854;*/
 	color: #FF593D;
 	font-size: 80px;
-	font-style: normal;
+	font-style: italic;
 	font-weight: 400;
 }
 
-.full-price span {
+.full-price > span {
 	display: block;
+	font-size: 16px;
 	
 	text-align: center;
 	color: #a2a2a2;
@@ -544,11 +560,6 @@ footer {
 		width: 100%;
 		padding: 25px;
 	}
-
-	
-
-
-
 }
 
 @media screen and (max-width: 480px) {
@@ -566,6 +577,14 @@ footer {
 
 	.description-txt {
 		padding: 30px;
+	}
+
+	.teacher h1 {
+		font-size: 28px;
+	}
+
+	.teacher h1 span {
+		font-size: 22px;
 	}
 }
 
