@@ -24,6 +24,7 @@ body, html {
 
 .wrapper.minwrapper {
 	max-width: 800px;
+	line-height: 35px;
 }
 
 /* MODULAR
@@ -62,8 +63,8 @@ p,
 ul li a,
 ul li,
 p a {
-	font-size: 22px;
-	line-height: 25px;
+	font-size: 20px;
+	line-height: 30px;
 	color: #444;
 }
 
