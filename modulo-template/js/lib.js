@@ -10,7 +10,11 @@ $(document).ready(function(){
 	});
 
 	$('.teacher h1').on('click', function(){
-		$('.teacher h1 span').text('ver +');
+		if ( $('.teacher h1 span').text() == 'ver -' ) {
+			$('.teacher h1 span').text('ver +');
+		} else{
+			$('.teacher h1 span').text('ver -');
+		};
 	});
 
 	$('.teacher-details p i').on('click', function(){
@@ -38,6 +42,8 @@ $(document).ready(function(){
 		});
 	});
 
+	$('.fa.fa-angle-double-up').css('display','none');
+
 	
 // $(window).resize(function(){
 // 	blog();
@@ -52,9 +58,14 @@ $(window).scroll(function(){
 	if (scrollPos > headerHei) {
 		$('.navbar').css('position','fixed');
 		$('.modulo').css('padding-top','185px');
+		// if ( $(window).width() <= 640) {
+			$('.fa.fa-angle-double-up').show();
+			// $('.fa.fa-angle-double-up').css('display','inline');
+		// };
 
 	} else {
 		$('.navbar').css('position','relative');
 		$('.modulo').css('padding-top','100px');
+		$('.fa.fa-angle-double-up').hide();
 	};
 });

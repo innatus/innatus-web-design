@@ -1,0 +1,45 @@
+// EXTENDS
+%borderBox
+	box-sizing: 		border-box
+	-webkit-box-sizing: border-box
+	-moz-box-sizing: 	border-box
+	-ms-box-sizing: 	border-box
+	-o-box-sizing: 		border-box
+
+%bgzCover
+	background-size: 			cover
+	-webkit-background-size: 	cover
+	-moz-background-size: 		cover
+	-ms-background-size: 		cover
+	-o-background-size: 		cover
+
+%boxShadow
+	box-shadow: 0 4px 5px transparentize($black, 0.8)
+%textShadow
+	text-shadow: 0 4px 5px transparentize($black, 0.8)
+
+
+// MIXINS
+@mixin transitions($duration, $ease)
+	transition: 		all $duration ease $ease
+	-webkit-transition: all $duration ease $ease
+	-moz-transition: 	all $duration ease $ease
+	-ms-transition: 	all $duration ease $ease
+	-o-transition: 		all $duration ease $ease
+
+@mixin borderRadius($radius)
+	border-radius: 			$radius
+	-webkit-border-radius: 	$radius
+	-moz-border-radius: 	$radius
+	-ms-border-radius: 		$radius
+	-o-border-radius: 		$radius
+
+@mixin textShadow($down, $blur, $alpha)
+	text-shadow: 0 $down $blur transparentize($black, $alpha)
+
+@mixin bgSize($size)
+	background-size: 			$size
+	-webkit-background-size: 	$size
+	-moz-background-size: 		$size
+	-ms-background-size: 		$size
+	-o-background-size: 		$size

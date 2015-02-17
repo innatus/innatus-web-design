@@ -1,0 +1,39 @@
+// HEADER
+.background
+	position: relative
+	width: 100%
+	height: 450px
+	max-height: 450px
+	@include bgSize(cover)
+	@include transitions(0.4s, 0s)
+
+
+// HOME
+.background.b-home
+	background: url(../img/pattern.gif) fixed repeat
+
+.slogan
+	padding-top: 120px
+
+	span
+		font-family: $font-secondary
+		display: block
+		font-size: 60px
+		color: $white
+
+		&:first-child
+			color: $primary
+
+.header-links
+	margin-top: 50px
+	display: block
+	font-size: 20px
+	color: transparentize($white, 0.5)
+
+	a
+		margin-top: 20px
+		color: transparentize($white, 0.5)
+		@include transitions(0.2s, 0s)
+
+		&:hover
+			color: $primary

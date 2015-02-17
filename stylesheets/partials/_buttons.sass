@@ -1,0 +1,53 @@
+.full-title
+	float: left
+	display: block
+	width: 100%
+	font-size: 32px
+	color: $white
+	font-family: $font-secondary
+
+	span
+		float: left
+
+	.acronym
+		padding: 8px 18px
+		background-color: $primary
+		margin-right: 15px
+		@include borderRadius(16px)
+		font-family: $font-primary
+
+	.course-title
+		margin-top: 8px
+
+	i
+		float: left
+		display: block
+		width: 28px
+		height: 28px
+
+		margin-top: 12px
+		padding-top: 5px
+		margin-left: 15px
+		background-color: $white
+		@include borderRadius(20px)
+		@extend %borderBox
+		
+		font-size: 16px
+		color: $black
+		text-align: center
+
+.btn-secondary
+	padding: 8px 18px
+	float: left
+	background-color: $transp
+	@extend %borderBox
+	@include borderRadius(16px)
+	border: 2px solid $white
+	font-size: 20px
+	color: $white
+	text-transform: uppercase
+	font-family: $font-primary
+	@include transitions(0.2s, 0s)
+
+	&:hover
+		background-color: transparentize($white, 0.9)
