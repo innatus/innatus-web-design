@@ -92,6 +92,8 @@ footer, .push {
     text-align: center; }
 
 .btn-secondary {
+  position: relative;
+  z-index: 3;
   padding: 8px 18px;
   float: left;
   background-color: transparent;
@@ -157,6 +159,8 @@ a, a:hover, a:focus, a:visited {
 .slogan {
   padding-top: 120px; }
   .slogan span {
+    position: relative;
+    z-index: 10;
     font-family: "PT Sans Narrow", sans-serif;
     display: block;
     font-size: 60px;
@@ -182,6 +186,7 @@ a, a:hover, a:focus, a:visited {
 
 header nav {
   width: 100%;
+  z-index: 3;
   position: absolute;
   padding: 20px 0;
   background-color: transparent; }
@@ -397,18 +402,30 @@ footer {
   width: 100%;
   height: 100%;
   top: 0;
-  background: url(../img/cursos/velo-cursos.png) center top repeat;
+  z-index: 1;
+  background: url(../img/velo.png) center top repeat;
   background-size: auto 100%; }
 
-@media screen and (max-width: 1024px) {
-  .background.b-cursos {
-    height: 270px; } }
-@media screen and (max-width: 640px) {
-  .background.b-cursos {
-    height: 200px; } }
+.background.b-cursos span {
+  text-align: center; }
+  .background.b-cursos span:first-child {
+    text-shadow: 0 5px 5px rgba(0, 0, 0, 0.2); }
+.background.b-cursos .price {
+  margin-top: 30px;
+  margin-bottom: 10px; }
+.background.b-cursos .duration {
+  font-size: 28px; }
+.background.b-cursos .btn-secondary {
+  margin-top: 40px;
+  float: none;
+  display: block;
+  max-width: 190px;
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center; }
 
 .background.b-csv {
-  background: url(../img/home/b-csv.jpg) fixed center top no-repeat; }
+  background: url(../img/home/b-csv.jpg) fixed top center no-repeat; }
 
 .course-bar {
   padding-top: 20px;
@@ -425,16 +442,20 @@ footer {
 .course-summary {
   background-color: #ff593d; }
   .course-summary p {
-    padding-top: 80px;
-    padding-bottom: 80px;
+    padding-top: 100px;
+    padding-bottom: 100px;
     color: #fff;
     font-size: 28px;
     text-align: center;
     font-style: italic; }
+    .course-summary p i {
+      color: rgba(255, 255, 255, 0.4); }
 
-.thumbs img {
-  width: 25%;
-  float: left; }
+.thumbs {
+  box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.2); }
+  .thumbs img {
+    width: 25%;
+    float: left; }
 
 .description-cont > div div {
   width: 50%; }

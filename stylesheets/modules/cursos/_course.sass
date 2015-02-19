@@ -6,15 +6,19 @@
 	// background: url(../img/pattern.gif) repeat
 
 	p
-		padding-top: 80px
-		padding-bottom: 80px
+		padding-top: 100px
+		padding-bottom: 100px
 		color: $white
 		font-size: 28px
 		text-align: center
 		font-style: italic
 
+		i
+			color: transparentize($white, 0.6)
+
 // thumbnails
 .thumbs
+	@include boxShadow(-5px, 10px, 0.8)
 	img
 		width: 25%
 		float: left
