@@ -149,13 +149,10 @@
 		color: lighten($black, 20%)
 
 	li
+		list-style-type: disc
 		margin-left: 20px
 		margin-bottom: 10px
 
-.target li
-	list-style-type: circle
-.topics li
-	list-style-type: disc
 
 .legal
 	max-width: 1024px
@@ -168,6 +165,9 @@
 	@extend %borderBox
 	padding: 30px
 	background-color: $info
+
+	@media screen and (max-width: 1024px)
+		margin-bottom: 50px
 
 	h1
 		padding-bottom: 20px
@@ -192,7 +192,7 @@
 		height: 100%
 		width: 100%
 		z-index: 1
-		background-color: transparentize($primary, 0.15)
+		background-color: transparentize($primary, 0.1)
 
 	.graduate
 		position: relative
@@ -217,7 +217,7 @@
 		p
 			color: $white
 			text-align: center
-			font-size: 22px
+			font-size: 20px
 
 		> div
 			display: block

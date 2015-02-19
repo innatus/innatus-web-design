@@ -588,14 +588,9 @@ footer {
   .profile li,
   .target li,
   .topics li {
+    list-style-type: disc;
     margin-left: 20px;
     margin-bottom: 10px; }
-
-.target li {
-  list-style-type: circle; }
-
-.topics li {
-  list-style-type: disc; }
 
 .legal {
   max-width: 1024px;
@@ -606,6 +601,9 @@ footer {
   border-radius: 5px;
   padding: 30px;
   background-color: #f6db4c; }
+  @media screen and (max-width: 1024px) {
+    .legal {
+      margin-bottom: 50px; } }
   .legal h1 {
     padding-bottom: 20px;
     font-size: 40px;
@@ -630,7 +628,7 @@ footer {
     height: 100%;
     width: 100%;
     z-index: 1;
-    background-color: rgba(255, 89, 61, 0.85); }
+    background-color: rgba(255, 89, 61, 0.9); }
   .certificate .graduate {
     position: relative;
     z-index: 2; }
@@ -651,7 +649,7 @@ footer {
     .certificate .graduate p {
       color: #fff;
       text-align: center;
-      font-size: 22px; }
+      font-size: 20px; }
     .certificate .graduate > div {
       display: block;
       margin-right: auto;
