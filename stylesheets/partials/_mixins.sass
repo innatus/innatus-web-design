@@ -34,6 +34,9 @@
 	-ms-border-radius: 		$radius
 	-o-border-radius: 		$radius
 
+@mixin boxShadow($down, $blur, $alpha)
+	box-shadow: 0 $down $blur transparentize($black, $alpha)
+
 @mixin textShadow($down, $blur, $alpha)
 	text-shadow: 0 $down $blur transparentize($black, $alpha)
 

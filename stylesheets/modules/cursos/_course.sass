@@ -1,0 +1,58 @@
+// COURSE
+
+// el modulo
+.course-summary
+	background-color: $primary
+	// background: url(../img/pattern.gif) repeat
+
+	p
+		padding-top: 80px
+		padding-bottom: 80px
+		color: $white
+		font-size: 28px
+		text-align: center
+		font-style: italic
+
+// thumbnails
+.thumbs
+	img
+		width: 25%
+		float: left
+
+.description-cont
+	> div div
+		width: 50%
+
+	> div
+		position: relative
+
+		&:nth-child(even) .description-pic,
+		&:nth-child(odd) .description-txt
+			float: left
+
+		&:nth-child(odd) .description-pic,
+		&:nth-child(even) .description-txt
+			float: right
+	
+	.photo
+		width: 100%
+
+	.description-txt, 
+	.description-pic
+		width: 50%
+
+	.description-txt
+		padding: 70px
+		@extend %borderBox
+
+		h2
+			font-family: $font-secondary
+			color: $primary
+			font-size: 40px
+			padding-bottom: 20px
+
+		p
+			font-size: 20px
+			line-height: 1.5
+			color: lighten($black, 30%)
+
