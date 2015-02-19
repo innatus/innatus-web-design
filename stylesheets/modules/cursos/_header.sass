@@ -14,8 +14,17 @@
 	span
 		text-align: center
 
+		@media screen and (max-width: 768px)
+			font-size: 50px
+		
+		@media screen and (max-width: 480px)
+			font-size: 42px
+
+
 		&:first-child
 			@include textShadow(5px, 5px, 0.8)
+
+
 
 	.price
 		margin-top: 30px
@@ -23,6 +32,9 @@
 
 	.duration
 		font-size: 28px
+
+		@media screen and (max-width: 480px)
+			font-size: 22px
 	
 	.btn-secondary
 		margin-top: 40px

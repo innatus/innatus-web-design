@@ -158,6 +158,9 @@ a, a:hover, a:focus, a:visited {
 
 .slogan {
   padding-top: 120px; }
+  @media screen and (max-width: 768px) {
+    .slogan {
+      padding-top: 80px; } }
   .slogan span {
     position: relative;
     z-index: 10;
@@ -408,6 +411,12 @@ footer {
 
 .background.b-cursos span {
   text-align: center; }
+  @media screen and (max-width: 768px) {
+    .background.b-cursos span {
+      font-size: 50px; } }
+  @media screen and (max-width: 480px) {
+    .background.b-cursos span {
+      font-size: 42px; } }
   .background.b-cursos span:first-child {
     text-shadow: 0 5px 5px rgba(0, 0, 0, 0.2); }
 .background.b-cursos .price {
@@ -415,6 +424,9 @@ footer {
   margin-bottom: 10px; }
 .background.b-cursos .duration {
   font-size: 28px; }
+  @media screen and (max-width: 480px) {
+    .background.b-cursos .duration {
+      font-size: 22px; } }
 .background.b-cursos .btn-secondary {
   margin-top: 40px;
   float: none;
@@ -456,30 +468,97 @@ footer {
   .thumbs img {
     width: 25%;
     float: left; }
+    @media screen and (max-width: 768px) {
+      .thumbs img {
+        width: 50%; } }
 
-.description-cont > div div {
-  width: 50%; }
-.description-cont > div {
-  position: relative; }
-  .description-cont > div:nth-child(even) .description-pic, .description-cont > div:nth-child(odd) .description-txt {
-    float: left; }
-  .description-cont > div:nth-child(odd) .description-pic, .description-cont > div:nth-child(even) .description-txt {
-    float: right; }
-.description-cont .photo {
-  width: 100%; }
-.description-cont .description-txt,
-.description-cont .description-pic {
-  width: 50%; }
-.description-cont .description-txt {
-  padding: 70px; }
-  .description-cont .description-txt h2 {
-    font-family: "PT Sans Narrow", sans-serif;
+.description-cont {
+  max-width: 1200px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 80px; }
+  @media screen and (max-width: 480px) {
+    .description-cont {
+      padding-right: 0;
+      padding-left: 0; } }
+  .description-cont > div div {
+    width: 50%; }
+    @media screen and (max-width: 768px) {
+      .description-cont > div div {
+        width: 100%; } }
+  .description-cont > div {
+    margin: 60px 0;
+    position: relative; }
+    @media screen and (max-width: 640px) {
+      .description-cont > div {
+        margin: 30px 0; } }
+    .description-cont > div:nth-child(even) .description-pic, .description-cont > div:nth-child(odd) .description-txt {
+      float: left; }
+    .description-cont > div:nth-child(odd) .description-pic, .description-cont > div:nth-child(even) .description-txt {
+      float: right; }
+  .description-cont .photo {
+    border-radius: 3px;
+    width: 100%; }
+  .description-cont .description-txt {
+    padding: 40px; }
+    @media screen and (max-width: 1024px) {
+      .description-cont .description-txt {
+        padding: 20px; } }
+    .description-cont .description-txt h2 {
+      font-family: "PT Sans Narrow", sans-serif;
+      color: #ff593d;
+      font-size: 40px;
+      padding-bottom: 20px; }
+      @media screen and (max-width: 1024px) {
+        .description-cont .description-txt h2 {
+          font-size: 32px; } }
+      @media screen and (max-width: 768px) {
+        .description-cont .description-txt h2 {
+          font-size: 40px; } }
+      @media screen and (max-width: 640px) {
+        .description-cont .description-txt h2 {
+          font-size: 25px; } }
+    .description-cont .description-txt p {
+      font-size: 20px;
+      line-height: 1.5;
+      color: #4d4d4d; }
+      @media screen and (max-width: 1024px) {
+        .description-cont .description-txt p {
+          font-size: 18px; } }
+      @media screen and (max-width: 768px) {
+        .description-cont .description-txt p {
+          font-size: 20px; } }
+      @media screen and (max-width: 640px) {
+        .description-cont .description-txt p {
+          font-size: 16px; } }
+
+.tools {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  background: url(../img/pattern.gif) fixed repeat; }
+  .tools h1 {
+    margin-bottom: 30px;
+    text-align: center;
     color: #ff593d;
     font-size: 40px;
-    padding-bottom: 20px; }
-  .description-cont .description-txt p {
+    font-family: "PT Sans Narrow", sans-serif; }
+  .tools li {
     font-size: 20px;
-    line-height: 1.5;
-    color: #4d4d4d; }
+    margin-bottom: 20px;
+    text-align: center;
+    color: #fff; }
+    .tools li a {
+      color: #fff; }
+      .tools li a i {
+        font-size: 16px;
+        color: rgba(255, 89, 61, 0.5);
+        transition: all 0.2s ease 0s;
+        -webkit-transition: all 0.2s ease 0s;
+        -moz-transition: all 0.2s ease 0s;
+        -ms-transition: all 0.2s ease 0s;
+        -o-transition: all 0.2s ease 0s; }
+    .tools li:hover i {
+      margin-left: 8px;
+      color: #ff593d; }
 
 /*# sourceMappingURL=main.css.map */
