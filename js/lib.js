@@ -62,11 +62,19 @@ $(document).ready(function(){
 	$('.menu').on('click', function(){
 		$('.expanded-menu').fadeIn();
 		$('.menu-items').addClass('expand');
+		$('body, html').css('overflow', 'hidden')
+
+		// if ( $(window).width() <= 640 ) {
+		// 	$('body, html').css('overflow', 'hidden')
+		// } else{
+		// 	$('body, html').css('overflow', 'scroll')
+		// };
 	});
 
 	$('.menu.menu-exp').on('click', function(){
 		$('.expanded-menu').fadeOut(100);
 		$('.menu-items').removeClass('expand');
+		$('body, html').css('overflow', 'visible')
 	});
 
 	// $('.acronym, .courseTitle').click(function(event){
