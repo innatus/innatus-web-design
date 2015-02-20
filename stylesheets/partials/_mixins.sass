@@ -27,6 +27,13 @@
 	-ms-transition: 	all $duration ease $ease
 	-o-transition: 		all $duration ease $ease
 
+@mixin transition($what, $duration, $ease)
+	transition: 		$what $duration ease $ease
+	-webkit-transition: $what $duration ease $ease
+	-moz-transition: 	$what $duration ease $ease
+	-ms-transition: 	$what $duration ease $ease
+	-o-transition: 		$what $duration ease $ease
+
 @mixin borderRadius($radius)
 	border-radius: 			$radius
 	-webkit-border-radius: 	$radius

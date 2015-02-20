@@ -59,6 +59,16 @@ $(document).ready(function(){
 		});
 	});
 
+	$('.menu').on('click', function(){
+		$('.expanded-menu').fadeIn();
+		$('.menu-items').addClass('expand');
+	});
+
+	$('.menu.menu-exp').on('click', function(){
+		$('.expanded-menu').fadeOut(100);
+		$('.menu-items').removeClass('expand');
+	});
+
 	// $('.acronym, .courseTitle').click(function(event){
 	// 	event.preventDefault();
 
