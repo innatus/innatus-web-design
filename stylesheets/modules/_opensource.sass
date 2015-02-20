@@ -7,8 +7,22 @@
 	img 
 		width: 20%
 		float: left
+		@media screen and (max-width: 480px)
+			width: 40%
+			display: block
+			float: none
+			margin-right: auto
+			margin-left: auto
+		@media screen and (max-width: 360px)
+			width: 50%
+			
 	p
 		float: right
 		margin-top: 15px
 		font-size: 20px
 		width: 70%
+		@media screen and (max-width: 640px)
+			font-size: 16px
+		@media screen and (max-width: 480px)
+			width: 100%
+			text-align: center

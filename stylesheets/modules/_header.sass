@@ -8,9 +8,6 @@
 	@include transitions(0.4s, 0s)
 
 // HOME
-.background.b-home
-	background: $bg-poly
-
 .slogan
 	padding-top: 120px
 
@@ -41,3 +38,19 @@
 
 		&:hover
 			color: $primary
+
+.background.b-home
+	background: $bg-poly
+	@media screen and (max-width: 640px)
+		.slogan
+			padding-top: 130px
+			span
+				font-size: 50px
+				margin-bottom: 10px
+			@media screen and (max-width: 480px)
+				padding-top: 110px
+				span
+					font-size: 45px
+					margin-bottom: 20px
+					@media screen and (max-width: 360px)
+						font-size: 38px

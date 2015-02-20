@@ -159,9 +159,6 @@ a, a:hover, a:focus, a:visited {
   -ms-transition: all 0.4s ease 0s;
   -o-transition: all 0.4s ease 0s; }
 
-.background.b-home {
-  background: url(../img/pattern.gif) fixed repeat; }
-
 .slogan {
   padding-top: 120px; }
   @media screen and (max-width: 768px) {
@@ -192,6 +189,25 @@ a, a:hover, a:focus, a:visited {
     -o-transition: all 0.2s ease 0s; }
     .header-links a:hover {
       color: #ff593d; }
+
+.background.b-home {
+  background: url(../img/pattern.gif) fixed repeat; }
+  @media screen and (max-width: 640px) {
+    .background.b-home .slogan {
+      padding-top: 130px; }
+      .background.b-home .slogan span {
+        font-size: 50px;
+        margin-bottom: 10px; } }
+  @media screen and (max-width: 640px) and (max-width: 480px) {
+    .background.b-home .slogan {
+      padding-top: 110px; }
+      .background.b-home .slogan span {
+        font-size: 45px;
+        margin-bottom: 20px; } }
+
+    @media screen and (max-width: 640px) and (max-width: 480px) and (max-width: 360px) {
+      .background.b-home .slogan span {
+        font-size: 38px; } }
 
 header nav {
   width: 100%;
@@ -232,10 +248,20 @@ header nav {
   -moz-transition: all 0.4s ease 0s;
   -ms-transition: all 0.4s ease 0s;
   -o-transition: all 0.4s ease 0s; }
+  @media screen and (max-width: 640px) {
+    .select-course-type a {
+      font-size: 25px; } }
+  @media screen and (max-width: 480px) {
+    .select-course-type a {
+      font-size: 30px;
+      padding: 18px 0; } }
   .select-course-type a:hover {
     background-color: #be422d; }
   .select-course-type a i {
     margin-right: 10px; }
+  @media screen and (max-width: 480px) {
+    .select-course-type a span {
+      display: none; } }
 
 .course {
   position: relative;
@@ -252,6 +278,10 @@ header nav {
   -moz-transition: all 0.4s ease 0s;
   -ms-transition: all 0.4s ease 0s;
   -o-transition: all 0.4s ease 0s; }
+  @media screen and (max-width: 640px) {
+    .course {
+      min-height: 200px;
+      background-size: auto 100%; } }
   .course .velo {
     position: absolute;
     top: 0;
@@ -269,6 +299,10 @@ header nav {
     -moz-transition: all 0.4s ease 0s;
     -ms-transition: all 0.4s ease 0s;
     -o-transition: all 0.4s ease 0s; }
+    @media screen and (max-width: 640px) {
+      .course .course-summary {
+        padding-top: 50px;
+        padding-bottom: 50px; } }
   .course .duration {
     display: block;
     width: 100%;
@@ -283,6 +317,9 @@ header nav {
     -moz-transition: all 0.4s ease 0s;
     -ms-transition: all 0.4s ease 0s;
     -o-transition: all 0.4s ease 0s; }
+    @media screen and (max-width: 640px) {
+      .course .duration {
+        font-size: 16px; } }
   .course .description-summary {
     float: left;
     margin-top: 10px;
@@ -294,12 +331,46 @@ header nav {
     -moz-transition: all 0.4s ease 0s;
     -ms-transition: all 0.4s ease 0s;
     -o-transition: all 0.4s ease 0s; }
+    @media screen and (max-width: 640px) {
+      .course .description-summary {
+        font-size: 14px;
+        line-height: 1.3; } }
   .course .pic-author {
     position: absolute;
     z-index: 2;
     bottom: 20px;
     right: 40px;
     color: rgba(255, 255, 255, 0.2); }
+  @media screen and (max-width: 640px) {
+    .course .btn-secondary {
+      font-size: 16px;
+      border-radius: 14px;
+      -webkit-border-radius: 14px;
+      -moz-border-radius: 14px;
+      -ms-border-radius: 14px;
+      -o-border-radius: 14px; } }
+  @media screen and (max-width: 640px) {
+    .course .full-title {
+      font-size: 20px; }
+      .course .full-title .acronym {
+        border-radius: 10px;
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        -ms-border-radius: 10px;
+        -o-border-radius: 10px; }
+      .course .full-title .course-title {
+        width: 100%;
+        font-size: 25px;
+        margin-top: 20px; } }
+    @media screen and (max-width: 640px) and (max-width: 360px) {
+      .course .full-title .course-title {
+        font-size: 22px; } }
+  @media screen and (max-width: 640px) {
+      .course .full-title i {
+        display: none; } }
+  @media screen and (max-width: 640px) {
+    .course > span {
+      display: none; } }
 
 .course.b-csv {
   background: url(../img/home/b-csv.jpg) center center no-repeat; }
@@ -323,11 +394,28 @@ header nav {
   .opensource img {
     width: 20%;
     float: left; }
+    @media screen and (max-width: 480px) {
+      .opensource img {
+        width: 40%;
+        display: block;
+        float: none;
+        margin-right: auto;
+        margin-left: auto; } }
+    @media screen and (max-width: 360px) {
+      .opensource img {
+        width: 50%; } }
   .opensource p {
     float: right;
     margin-top: 15px;
     font-size: 20px;
     width: 70%; }
+    @media screen and (max-width: 640px) {
+      .opensource p {
+        font-size: 16px; } }
+    @media screen and (max-width: 480px) {
+      .opensource p {
+        width: 100%;
+        text-align: center; } }
 
 .meetus {
   background-color: #424854;
@@ -337,6 +425,9 @@ header nav {
     display: block;
     margin-right: auto;
     margin-left: auto; }
+    @media screen and (max-width: 640px) {
+      .meetus img {
+        height: 80px; } }
   .meetus p {
     font-size: 22px;
     color: #fff;
@@ -344,6 +435,9 @@ header nav {
     text-align: center;
     margin-top: 30px;
     margin-bottom: 30px; }
+    @media screen and (max-width: 640px) {
+      .meetus p {
+        font-size: 18px; } }
   .meetus .btn-secondary {
     float: none;
     display: block;
@@ -351,6 +445,9 @@ header nav {
     margin-right: auto;
     margin-left: auto;
     text-align: center; }
+    @media screen and (max-width: 640px) {
+      .meetus .btn-secondary {
+        font-size: 16px; } }
 
 .teachers {
   position: relative;
@@ -364,14 +461,22 @@ header nav {
   -moz-background-size: cover;
   -ms-background-size: cover;
   -o-background-size: cover; }
+  @media screen and (max-width: 640px) {
+    .teachers {
+      padding-top: 80px;
+      padding-bottom: 80px; } }
   .teachers .velo-docente {
     height: 450px;
+    max-height: 450px;
     width: 100%;
     position: absolute;
     z-index: 1;
     top: 0;
     background: url(../img/home/velo-docentes.png) repeat;
     background-size: 2px 100%; }
+    @media screen and (max-width: 640px) {
+      .teachers .velo-docente {
+        max-height: 200px; } }
   .teachers .btn-secondary {
     position: relative;
     z-index: 2;
@@ -381,6 +486,9 @@ header nav {
     margin-right: auto;
     margin-left: auto;
     text-align: center; }
+    @media screen and (max-width: 640px) {
+      .teachers .btn-secondary {
+        font-size: 16px; } }
 
 footer {
   display: block;
@@ -404,8 +512,11 @@ footer {
     font-size: 32px; }
     @media screen and (max-width: 640px) {
       footer a {
-        padding: 10px;
+        padding: 10px 30px;
         margin-top: 20px; } }
+    @media screen and (max-width: 360px) {
+      footer a {
+        padding: 10px 20px; } }
   footer .fa.fa-facebook-official:hover {
     color: #3b5998; }
   footer .fa.fa-twitter:hover {
@@ -506,7 +617,8 @@ footer {
   @media screen and (max-width: 480px) {
     .description-cont {
       padding-right: 0;
-      padding-left: 0; } }
+      padding-left: 0;
+      margin-top: 30px; } }
   .description-cont > div div {
     width: 50%; }
     @media screen and (max-width: 768px) {
@@ -524,7 +636,18 @@ footer {
       float: right; }
   .description-cont .photo {
     border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
     width: 100%; }
+    @media screen and (max-width: 480px) {
+      .description-cont .photo {
+        border-radius: 0;
+        -webkit-border-radius: 0;
+        -moz-border-radius: 0;
+        -ms-border-radius: 0;
+        -o-border-radius: 0; } }
   .description-cont .description-txt {
     padding: 40px; }
     @media screen and (max-width: 1024px) {
@@ -543,6 +666,9 @@ footer {
           font-size: 40px; } }
       @media screen and (max-width: 640px) {
         .description-cont .description-txt h2 {
+          font-size: 28px; } }
+      @media screen and (max-width: 360px) {
+        .description-cont .description-txt h2 {
           font-size: 22px; } }
     .description-cont .description-txt p {
       font-size: 20px;
@@ -555,6 +681,9 @@ footer {
         .description-cont .description-txt p {
           font-size: 20px; } }
       @media screen and (max-width: 640px) {
+        .description-cont .description-txt p {
+          font-size: 18px; } }
+      @media screen and (max-width: 360px) {
         .description-cont .description-txt p {
           font-size: 14px; } }
 
@@ -574,6 +703,10 @@ footer {
     font-family: "PT Sans Narrow", sans-serif; }
     @media screen and (max-width: 640px) {
       .tools h1 {
+        font-size: 32px;
+        text-align: left; } }
+    @media screen and (max-width: 360px) {
+      .tools h1 {
         font-size: 28px; } }
   .tools li {
     font-size: 20px;
@@ -582,8 +715,12 @@ footer {
     color: #fff; }
     @media screen and (max-width: 640px) {
       .tools li {
-        font-size: 14px;
-        line-height: 1.5; } }
+        font-size: 16px;
+        line-height: 1.5;
+        text-align: left; } }
+    @media screen and (max-width: 360px) {
+      .tools li {
+        font-size: 14px; } }
     .tools li a {
       color: #fff; }
       .tools li a i {
@@ -594,6 +731,10 @@ footer {
         -moz-transition: all 0.2s ease 0s;
         -ms-transition: all 0.2s ease 0s;
         -o-transition: all 0.2s ease 0s; }
+        @media screen and (max-width: 480px) {
+          .tools li a i {
+            font-size: 12px;
+            margin-left: 3px; } }
     .tools li:hover i {
       margin-left: 8px;
       color: #ff593d; }
@@ -659,6 +800,9 @@ footer {
     @media screen and (max-width: 640px) {
       .legal h1 {
         font-size: 28px; } }
+    @media screen and (max-width: 360px) {
+      .legal h1 {
+        font-size: 22px; } }
   .legal p {
     font-size: 22px;
     color: #424854; }
@@ -766,7 +910,8 @@ footer {
     font-weight: 700;
     font-family: "PT Sans Narrow", sans-serif;
     font-style: italic;
-    text-align: center; }
+    text-align: center;
+    cursor: pointer; }
     @media screen and (max-width: 768px) {
       .teacher h1 {
         font-size: 40px; } }
@@ -791,7 +936,6 @@ footer {
     display: none;
     padding: 20px;
     margin-bottom: 30px;
-    background-color: #f2f2f2;
     border-radius: 4px;
     -webkit-border-radius: 4px;
     -moz-border-radius: 4px;
@@ -802,20 +946,24 @@ footer {
       line-height: 1.3; }
       @media screen and (max-width: 640px) {
         .teacher .teacher-details p {
-          font-size: 12px; } }
+          font-size: 16px; } }
+      @media screen and (max-width: 360px) {
+        .teacher .teacher-details p {
+          font-size: 14px; } }
       .teacher .teacher-details p i {
         display: block;
         margin-top: 20px;
         font-size: 32px;
+        color: #ff593d;
         cursor: pointer; }
 
 .full-price {
   background-color: #1a1a1a;
   padding-top: 60px;
-  padding-bottom: 60px; }
+  padding-bottom: 30px; }
   .full-price h1 {
     padding-top: 30px;
-    padding-bottom: 30px;
+    padding-bottom: 20px;
     font-size: 90px;
     color: #ff593d;
     font-family: "PT Sans Narrow", sans-serif;
@@ -838,6 +986,7 @@ footer {
       color: #f6db4c; }
   .full-price .more-benefits {
     font-size: 16px;
+    margin-top: 40px;
     color: rgba(255, 255, 255, 0.2); }
     @media screen and (max-width: 640px) {
       .full-price .more-benefits {
@@ -853,5 +1002,18 @@ footer {
     margin-right: auto;
     margin-left: auto;
     text-align: center; }
+  .full-price .top {
+    display: block;
+    margin-top: 60px;
+    font-size: 16px;
+    color: #fff;
+    text-align: center;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.5); }
+    @media screen and (max-width: 640px) {
+      .full-price .top {
+        font-size: 12px; } }
+    .full-price .top i {
+      margin-right: 10px; }
 
 /*# sourceMappingURL=main.css.map */

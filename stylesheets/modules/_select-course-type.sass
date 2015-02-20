@@ -13,8 +13,18 @@
 		font-family: $font-secondary
 		@include transitions(0.4s, 0s)
 
+		@media screen and (max-width: 640px)
+			font-size: 25px
+		@media screen and (max-width: 480px)
+			font-size: 30px
+			padding: 18px 0
+
 		&:hover
 			background-color: #be422d
 
 		i
 			margin-right: 10px
+	
+		span
+			@media screen and (max-width: 480px)
+				display: none

@@ -3,30 +3,31 @@ $(document).ready(function(){
 	$('.teacher h1, .teacher-details p i').on('click', function(){
 		$('.teacher-details').slideToggle('toggleSlide');
 		$('html, body').stop().animate({
-			'scrollTop': $('.teacher h1').offset().top - 120
+			'scrollTop': $('.teacher').offset().top + 5
 		}, 500, 'swing', function () {
 			//window.location.hash = target;
 		});
 	});
 
 	$('.teacher h1').on('click', function(){
-		if ( $('.teacher h1 span').text() == 'ver -' ) {
-			$('.teacher h1 span').text('ver +');
+		if ( $('.teacher h1 span').text() == 'ver-' ) {
+			$('.teacher h1 span').text('ver+');
 		} else{
-			$('.teacher h1 span').text('ver -');
+			$('.teacher h1 span').text('ver-');
 		};
 	});
 
 	$('.teacher-details p i').on('click', function(){
-		$('.teacher h1 span').text('ver +');
+		$('.teacher h1 span').text('ver+');
 	});
 
-	$('.acronym, .courseTitle').click(function(event){
-		event.preventDefault();
-
-		$('html, body').animate({
-			scrollTop: 0
-		}, 1000);
+	$('.top').on('click', function(e){
+		e.preventDefault();
+		$('html, body').stop().animate({
+			'scrollTop': 0
+		}, 1200, 'swing', function () {
+			//window.location.hash = target;
+		});
 	});
 
 	$('a[href^="#detalles"], a[href^="#second"]').on('click',function (e) {
@@ -42,7 +43,31 @@ $(document).ready(function(){
 		});
 	});
 
-	$('.fa.fa-angle-double-up').css('display','none');
+	$('#link-to-manuales').on('click', function(){
+		$('html, body').stop().animate({
+			'scrollTop': $('#manuales').offset().top +17
+		}, 900, 'swing', function () {
+			//window.location.hash = target;
+		});
+	});
+
+	$('#link-to-informaticos').on('click', function(){
+		$('html, body').stop().animate({
+			'scrollTop': $('#informaticos').offset().top +17
+		}, 900, 'swing', function () {
+			//window.location.hash = target;
+		});
+	});
+
+	// $('.acronym, .courseTitle').click(function(event){
+	// 	event.preventDefault();
+
+	// 	$('html, body').animate({
+	// 		scrollTop: 0
+	// 	}, 1000);
+	// });
+
+	// $('.fa.fa-angle-double-up').css('display','none');
 
 	
 // $(window).resize(function(){
