@@ -74,8 +74,9 @@ $(document).ready(function(){
 		});
 	});
 
+	// se abre el menú
 	$('.menu').on('click', function(){
-		$('.expanded-menu').fadeIn();
+		$('.expanded-menu').fadeIn(400);
 		$('.menu-items').addClass('expand');
 		$('body, html').css('overflow', 'hidden')
 
@@ -86,6 +87,7 @@ $(document).ready(function(){
 		// };
 	});
 
+	// se abre el menú
 	$('.menu.menu-exp').on('click', function(){
 		$('.expanded-menu').fadeOut(100);
 		$('.menu-items').removeClass('expand');
