@@ -637,9 +637,6 @@ footer {
   margin-left: auto;
   text-align: center; }
 
-.background.b-csv {
-  background: url(../img/home/b-csv.jpg) top center no-repeat; }
-
 .course-bar {
   padding-top: 20px;
   padding-bottom: 20px;
@@ -886,7 +883,6 @@ footer {
 .certificate {
   position: relative;
   padding: 70px 0;
-  background: url(../img/home/b-csv.jpg) top center no-repeat;
   background-size: cover;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -898,7 +894,7 @@ footer {
     height: 100%;
     width: 100%;
     z-index: 1;
-    background-color: rgba(255, 89, 61, 0.9); }
+    background-color: rgba(255, 89, 61, 0.8); }
   .certificate .graduate {
     position: relative;
     z-index: 2; }
@@ -1057,6 +1053,9 @@ footer {
         font-size: 14px; } }
     .full-price p strong {
       color: #f6db4c; }
+  .full-price .course-date {
+    color: #ff593d;
+    padding-top: 10px; }
   .full-price .more-benefits {
     font-size: 16px;
     margin-top: 40px;
@@ -1088,5 +1087,29 @@ footer {
         font-size: 12px; } }
     .full-price .top i {
       margin-right: 10px; }
+
+.background.b-csv,
+.certificate.b-csv {
+  background: url(../img/home/b-csv.jpg) top center no-repeat; }
+
+.background.b-csp,
+.certificate.b-csp {
+  background: url(../img/home/b-csp.jpg) top center no-repeat; }
+
+.background.b-dwi,
+.certificate.b-dwi {
+  background: url(../img/home/b-dwi.jpg) top center no-repeat; }
+
+.background.b-mra,
+.certificate.b-mra {
+  background: url(../img/home/b-mra.jpg) top center no-repeat; }
+
+.background.b-at1,
+.certificate.b-at1 {
+  background: url(../img/home/b-at1.jpg) top center no-repeat; }
+
+.background.b-dtp,
+.certificate.b-dtp {
+  background: url(../img/home/b-dtp.jpg) top center no-repeat; }
 
 /*# sourceMappingURL=main.css.map */

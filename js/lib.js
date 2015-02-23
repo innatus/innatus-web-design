@@ -1,15 +1,17 @@
+function docenteExpand(){
+	$('.teacher-details').slideToggle('toggleSlide');
+	$('html, body').stop().animate({
+		'scrollTop': $('.teacher').offset().top
+	}, 500, 'swing', function () {
+		//window.location.hash = target;
+	});
+};
+
 $(document).ready(function(){
 
-	$('.teacher h1, .teacher-details p i').on('click', function(){
-		$('.teacher-details').slideToggle('toggleSlide');
-		$('html, body').stop().animate({
-			'scrollTop': $('.teacher').offset().top + 5
-		}, 500, 'swing', function () {
-			//window.location.hash = target;
-		});
-	});
-
+	// Detalles del docente solo cambio de texto
 	$('.teacher h1').on('click', function(){
+		docenteExpand();
 		if ( $('.teacher h1 span').text() == 'ver-' ) {
 			$('.teacher h1 span').text('ver+');
 		} else{
@@ -18,9 +20,11 @@ $(document).ready(function(){
 	});
 
 	$('.teacher-details p i').on('click', function(){
+		docenteExpand();
 		$('.teacher h1 span').text('ver+');
 	});
 
+	// ir arriba
 	$('.top').on('click', function(e){
 		e.preventDefault();
 		$('html, body').stop().animate({
@@ -30,19 +34,20 @@ $(document).ready(function(){
 		});
 	});
 
-	$('a[href^="#detalles"], a[href^="#second"]').on('click',function (e) {
-		e.preventDefault();
+	// $('a[href^="#detalles"], a[href^="#second"]').on('click',function (e) {
+	// 	e.preventDefault();
 
-		var target = this.hash;
-		$target = $(target);
+	// 	var target = this.hash;
+	// 	$target = $(target);
 
-		$('html, body').stop().animate({
-			'scrollTop': $target.offset().top - 79
-		}, 900, 'swing', function () {
-			//window.location.hash = target;
-		});
-	});
+	// 	$('html, body').stop().animate({
+	// 		'scrollTop': $target.offset().top - 79
+	// 	}, 900, 'swing', function () {
+	// 		//window.location.hash = target;
+	// 	});
+	// });
 
+	// boton te lleva a ver cursos manuales
 	$('#link-to-manuales').on('click', function(){
 		$('html, body').stop().animate({
 			'scrollTop': $('#manuales').offset().top +17
@@ -51,10 +56,20 @@ $(document).ready(function(){
 		});
 	});
 
+	// boton te lleva a ver cursos informaticos
 	$('#link-to-informaticos').on('click', function(){
 		$('html, body').stop().animate({
 			'scrollTop': $('#informaticos').offset().top +17
 		}, 900, 'swing', function () {
+			//window.location.hash = target;
+		});
+	});
+
+	// boton que te lleva a inscripcion
+	$('#link-to-inscripcion').on('click', function(){
+		$('html, body').stop().animate({
+			'scrollTop': $('.full-price').offset().top
+		}, 1000, 'swing', function () {
 			//window.location.hash = target;
 		});
 	});
