@@ -1,0 +1,56 @@
+// HEADER
+.background
+	position: relative
+	width: 100%
+	height: 450px
+	max-height: 450px
+	@include bgSize(cover)
+	@include transitions(0.4s, 0s)
+
+// HOME
+.slogan
+	padding-top: 120px
+
+	@media screen and (max-width: 768px)
+		padding-top: 80px
+
+	span
+		position: relative
+		z-index: 10
+		font-family: $font-secondary
+		display: block
+		font-size: 60px
+		color: $white
+
+		&:first-child
+			color: $primary
+
+.header-links
+	margin-top: 50px
+	display: block
+	font-size: 20px
+	color: transparentize($white, 0.5)
+
+	a
+		margin-top: 20px
+		color: transparentize($white, 0.5)
+		@include transitions(0.2s, 0s)
+
+		&:hover
+			color: $primary
+
+.background.b-home
+	background: $bg-poly
+	@media screen and (max-width: 640px)
+		.slogan
+			padding-top: 130px
+			span
+				font-size: 50px
+				margin-bottom: 10px
+			@media screen and (max-width: 480px)
+				padding-top: 110px
+				span
+					font-size: 45px
+					margin-bottom: 20px
+					@media screen and (max-width: 360px)
+						font-size: 38px

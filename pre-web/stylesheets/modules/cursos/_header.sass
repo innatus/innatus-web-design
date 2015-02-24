@@ -1,0 +1,46 @@
+// HEADER CURSOS
+.velo-cursos
+	position: absolute
+	width: 100%
+	height: 100%
+	top: 0
+	z-index: 1
+	background: url(../img/velo.png) center top repeat
+	background-size: auto 100%
+
+// CSV
+.background.b-cursos
+
+	span
+		text-align: center
+
+		@media screen and (max-width: 768px)
+			font-size: 50px
+		
+		@media screen and (max-width: 480px)
+			font-size: 42px
+
+
+		&:first-child
+			@include textShadow(5px, 5px, 0.8)
+
+	.price
+		margin-top: 30px
+		margin-bottom: 10px
+
+	.duration
+		font-size: 28px
+
+		@media screen and (max-width: 480px)
+			font-size: 22px
+	
+	.btn-secondary
+		margin-top: 40px
+		float: none
+		display: block
+		max-width: 190px
+		margin-right: auto
+		margin-left: auto
+		text-align: center
+
+
