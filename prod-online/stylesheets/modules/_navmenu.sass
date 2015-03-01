@@ -1,0 +1,60 @@
+// NAV MENU
+nav
+	width: 100%
+	z-index: 999
+	position: fixed
+	padding: 20px 0
+	background-color: $transp
+	@include transition(background-color, 0.2s, 0s)
+	// @include transition(padding, 0.2s, 0s)
+	// @include transition(background-color, 0.5s, 0s)
+
+	#index
+		float: left
+
+.nav-scrollup
+	background-color: $secondary
+	// background: url(../img/velo-nav.png) repeat
+	// background-size: 1px 100%
+	// padding: 10px 0
+
+.menu
+	display: none
+	float: right
+	color: $white
+	padding: 5px 8px
+	border-radius: 10px
+	font-size: 25px
+	cursor: pointer
+	@include transitions(0.4s, 0s)
+
+	&:hover
+		color: $primary
+
+	@media screen and (max-width: 768px)
+		display: block
+
+.menues
+	a
+		float: right
+		color: $white
+		margin-left: 20px
+		margin-top: 10px
+		text-transform: uppercase
+		@include transition(all, 0.2s, 0s)
+
+		&:hover
+			color: $primary
+
+		@media screen and (max-width: 768px)
+			display: none
+
+	.top
+		display: none
+		margin-left: 60px
+		color: $info
+		@include transition(margin, 0.4s, 0s)
+
+	.top.scrollup
+		margin-left: 20px
+
