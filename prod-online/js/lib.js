@@ -91,6 +91,22 @@ $(document).ready(function(){
 		};
 	});
 
+	//INSCRIPCION
+
+	//previene link del a
+	$('.pick-course a').on('click', function(e){
+		e.preventDefault();
+	});
+
+	//agrega borde naranja y otros estilo
+	$('.pick-course').on('click', function(){
+		if ( $(this).hasClass('active') ) {
+			$(this).removeClass('active');
+		} else {
+			$(this).addClass('active');
+		}
+	});
+
 });
 
 	
@@ -104,7 +120,7 @@ $(window).scroll(function(){
 			$('nav').fadeOut(100).removeClass('nav-scrollup');
 		} else {
 			$('nav').hide().removeClass('nav-scrollup');
-		};
+		}
 		$('.menues .top').fadeOut().removeClass('scrollup');
 	} else {
 		// scroll up
@@ -117,7 +133,7 @@ $(window).scroll(function(){
 				$('nav').slideDown(150).addClass('nav-scrollup');
 				if (st > 450) {
 					$('.menues .top').fadeIn(1000).addClass('scrollup');
-				};
+				}
 			}
 		} else {
 			if (st <= 0) {
@@ -127,9 +143,9 @@ $(window).scroll(function(){
 				$('nav').fadeIn(100).addClass('nav-scrollup');
 				if (st > 450) {
 					$('.menu-top').fadeIn();
-				};
-			};
-		};
+				}
+			}
+		}
 		
 	}; //end if
 

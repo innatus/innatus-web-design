@@ -52,7 +52,7 @@ footer, .push {
     footer, .push {
       height: 90px; } }
 
-.full-title i, .btn-secondary, .wrapper, .description-cont .description-txt, .legal, .certificate, .teacher .teacher-details {
+.full-title i, .btn-secondary, .wrapper, .description-cont .description-txt, .legal, .certificate, .teacher .teacher-details, .select-course .pick-course {
   box-sizing: border-box;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -63,6 +63,8 @@ footer, .push {
   box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2); }
 
 .full-title {
+  position: relative;
+  z-index: 5;
   float: left;
   display: block;
   font-size: 32px;
@@ -123,6 +125,15 @@ footer, .push {
   -o-transition: all 0.2s ease 0s; }
   .btn-secondary:hover {
     background-color: rgba(255, 255, 255, 0.1); }
+
+.btn-secondary.centered {
+  margin-top: 40px;
+  float: none;
+  display: block;
+  max-width: 190px;
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center; }
 
 body, html {
   font-family: "PT Sans", sans-serif;
@@ -315,6 +326,14 @@ nav {
     .select-course-type a span {
       display: none; } }
 
+.velo {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background: url(../img/velo.png) repeat; }
+
 .course {
   position: relative;
   width: 100%;
@@ -334,13 +353,6 @@ nav {
     .course {
       min-height: 200px;
       background-size: auto 100%; } }
-  .course .velo {
-    position: absolute;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
-    background: url(../img/velo.png) repeat; }
   .course .course-summary {
     position: relative;
     z-index: 2;
@@ -683,6 +695,13 @@ footer {
         font-size: 16px; } }
     .modulo p i {
       color: rgba(255, 255, 255, 0.4); }
+    .modulo p a {
+      color: #f6db4c;
+      text-decoration: underline; }
+    .modulo p span {
+      display: block;
+      font-size: 20px;
+      margin-top: 20px; }
 
 .thumbs {
   box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.2); }
@@ -1113,32 +1132,107 @@ footer {
 
 .background.b-csv,
 .certificate.b-csv,
-.course.b-csv {
+.course.b-csv,
+.pick-course.b-csv {
   background: #424854 url(../img/home/b-csv.jpg) center center no-repeat; }
 
 .background.b-csp,
 .certificate.b-csp,
-.course.b-csp {
+.course.b-csp,
+.pick-course.b-csp {
   background: #424854 url(../img/home/b-csp.jpg) center center no-repeat; }
 
 .background.b-dwi,
 .certificate.b-dwi,
-.course.b-dwi {
+.course.b-dwi,
+.pick-course.b-dwi {
   background: #424854 url(../img/home/b-dwi.jpg) center center no-repeat; }
 
 .background.b-mra,
 .certificate.b-mra,
-.course.b-mra {
+.course.b-mra,
+.pick-course.b-mra {
   background: #424854 url(../img/home/b-mra.jpg) center center no-repeat; }
 
 .background.b-at1,
 .certificate.b-at1,
-.course.b-at1 {
+.course.b-at1,
+.pick-course.b-at1 {
   background: #424854 url(../img/home/b-at1.jpg) center center no-repeat; }
 
 .background.b-dtp,
 .certificate.b-dtp,
-.course.b-dtp {
+.course.b-dtp,
+.pick-course.b-dtp {
   background: #424854 url(../img/home/b-dtp.jpg) center center no-repeat; }
+
+.inscripcion {
+  background-color: #1a1a1a; }
+  .inscripcion h2 {
+    font-family: "PT Sans Narrow", sans-serif;
+    color: #ff593d;
+    font-size: 40px;
+    padding-bottom: 20px;
+    text-align: center; }
+    @media screen and (max-width: 1024px) {
+      .inscripcion h2 {
+        font-size: 32px; } }
+    @media screen and (max-width: 768px) {
+      .inscripcion h2 {
+        font-size: 40px; } }
+    @media screen and (max-width: 640px) {
+      .inscripcion h2 {
+        font-size: 28px; } }
+    @media screen and (max-width: 360px) {
+      .inscripcion h2 {
+        font-size: 22px; } }
+
+.alerta-inscripcion {
+  display: block;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  color: #f6db4c;
+  font-size: 18px;
+  font-family: "PT Sans", sans-serif;
+  text-align: center; }
+
+.select-course {
+  padding-top: 60px;
+  padding-bottom: 60px; }
+  .select-course h2 {
+    margin-top: 50px;
+    margin-bottom: 80px; }
+  .select-course .pick-course {
+    margin-top: 20px;
+    padding: 60px 0;
+    position: relative;
+    background-size: 100% auto;
+    cursor: pointer;
+    border: 5px solid #1a1a1a; }
+    .select-course .pick-course a {
+      margin-left: 40px; }
+    .select-course .pick-course .fa {
+      opacity: 0;
+      position: relative;
+      z-index: 2;
+      float: right;
+      font-size: 40px;
+      margin-right: 5px;
+      margin-top: 5px;
+      color: #fff;
+      transition: all 0.2s ease 0s;
+      -webkit-transition: all 0.2s ease 0s;
+      -moz-transition: all 0.2s ease 0s;
+      -ms-transition: all 0.2s ease 0s;
+      -o-transition: all 0.2s ease 0s; }
+    .select-course .pick-course:hover .fa {
+      opacity: 0.5;
+      margin-right: 40px; }
+  .select-course .pick-course.active {
+    border: 5px solid #ff593d; }
+    .select-course .pick-course.active .fa {
+      opacity: 1;
+      margin-right: 40px;
+      color: #ff593d; }
 
 /*# sourceMappingURL=main.css.map */
