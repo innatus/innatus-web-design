@@ -59,6 +59,9 @@ footer, .push {
   -ms-box-sizing: border-box;
   -o-box-sizing: border-box; }
 
+.nav-scrollup {
+  box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2); }
+
 .full-title {
   float: left;
   display: block;
@@ -211,7 +214,7 @@ a, a:hover, a:focus, a:visited {
 
 nav {
   width: 100%;
-  z-index: 999;
+  z-index: 11;
   position: fixed;
   padding: 20px 0;
   background-color: transparent;
@@ -226,7 +229,8 @@ nav {
 .nav-scrollup {
   background-color: #424854; }
 
-.menu {
+.menu,
+.menu-top {
   display: none;
   float: right;
   color: #fff;
@@ -239,11 +243,18 @@ nav {
   -moz-transition: all 0.4s ease 0s;
   -ms-transition: all 0.4s ease 0s;
   -o-transition: all 0.4s ease 0s; }
-  .menu:hover {
+  .menu:hover,
+  .menu-top:hover {
     color: #ff593d; }
-  @media screen and (max-width: 768px) {
-    .menu {
-      display: block; } }
+
+@media screen and (max-width: 768px) {
+  .menu {
+    display: block; } }
+
+.menu-top {
+  margin-right: 30px;
+  font-size: 15px;
+  margin-top: 5px; }
 
 .menues a {
   float: right;
@@ -263,7 +274,7 @@ nav {
       display: none; } }
 .menues .top {
   display: none;
-  margin-left: 60px;
+  margin-left: 80px;
   color: #f6db4c;
   transition: margin 0.4s ease 0s;
   -webkit-transition: margin 0.4s ease 0s;
@@ -561,7 +572,7 @@ footer {
   right: 0;
   width: 100%;
   height: 100%;
-  z-index: 10;
+  z-index: 100;
   background-color: #fff; }
   .expanded-menu .menu {
     color: #ff593d;
@@ -1077,6 +1088,15 @@ footer {
     margin-right: auto;
     margin-left: auto;
     text-align: center; }
+  .full-price .contact {
+    display: block;
+    margin-top: 50px;
+    text-align: center;
+    margin-right: auto;
+    margin-left: auto;
+    color: #fff; }
+    .full-price .contact:hover {
+      color: #f6db4c; }
   .full-price .top {
     display: block;
     margin-top: 60px;

@@ -1,4 +1,6 @@
 var lastScrollTop = 0;
+var top = $(window).scrollTop();
+	left = $(window).scrollLeft();
 
 function docenteExpand(){
 	$('.teacher-details').slideToggle('toggleSlide');
@@ -34,6 +36,7 @@ $(document).ready(function(){
 	// ir arriba
 	$('.top').on('click', function(e){
 		e.preventDefault();
+		$(this).blur();
 		$('html, body').stop().animate({
 			'scrollTop': 0
 		}, 1200, 'swing', function () {
@@ -75,16 +78,17 @@ $(document).ready(function(){
 	$('.menu').on('click', function(){
 		$('.expanded-menu').fadeIn(400);
 		$('.menu-items').addClass('expand');
-		$('body, html').css('overflow', 'hidden')
-		$('nav').hide();
+		// $('body, html').css('overflow', 'hidden')
 	});
 
-	// se abre el menú
+	// se cierra el menú
 	$('.menu.menu-exp').on('click', function(){
 		$('.expanded-menu').fadeOut(100);
 		$('.menu-items').removeClass('expand');
-		$('body, html').css('overflow', 'visible')
-		$('nav').show();
+		// $('body, html').css('overflow', 'visible')
+		if ( $(window).scrollTop() > 5) {
+			$('nav').show().addClass('nav-scrollup')
+		};
 	});
 
 });
@@ -96,20 +100,38 @@ $(window).scroll(function(){
 
 	if (st > lastScrollTop){
 		// scroll down
-		$('nav').fadeOut(100).removeClass('nav-scrollup');
+		if ( $(window).width() > 768) {
+			$('nav').fadeOut(100).removeClass('nav-scrollup');
+		} else {
+			$('nav').hide().removeClass('nav-scrollup');
+		};
 		$('.menues .top').fadeOut().removeClass('scrollup');
 	} else {
 		// scroll up
-		if (st <= 150) {
-			$('nav').removeClass('nav-scrollup');
-			$('.menues .top').hide().removeClass('scrollup');
+		if ( $(window).width() > 768) {
+			if (st <= 5) {
+				$('nav').removeClass('nav-scrollup');
+				$('.menues .top').hide().removeClass('scrollup');
+				$('.menu-top').hide();
+			} else {
+				$('nav').slideDown(150).addClass('nav-scrollup');
+				if (st > 450) {
+					$('.menues .top').fadeIn(1000).addClass('scrollup');
+				};
+			}
 		} else {
-			$('nav').slideDown(150).addClass('nav-scrollup');
-			if ( $(window).width() > 768 && st > 450) {
-				$('.menues .top').fadeIn().addClass('scrollup');
+			if (st <= 0) {
+				$('nav').removeClass('nav-scrollup');
+				$('.menu-top').hide();
+			} else {
+				$('nav').fadeIn(100).addClass('nav-scrollup');
+				if (st > 450) {
+					$('.menu-top').fadeIn();
+				};
 			};
-		}
-	}
+		};
+		
+	}; //end if
 
 	lastScrollTop = st;
 
