@@ -9,14 +9,18 @@ function docenteExpand(){
 	}, 500, 'swing', function () {
 		//window.location.hash = target;
 	});
-};
+}
+
+function superScrollDown(scrollToX){
+	return true;
+}
 
 $(document).ready(function(){
 
 	if ( $(window) <= 0) {
 		$('nav').removeClass('nav-scrollup');
 		$('.menues .top').removeClass('scrollup').hide();
-	};
+	}
 
 	// Detalles del docente solo cambio de texto
 	$('.teacher h1').on('click', function(){
@@ -25,7 +29,7 @@ $(document).ready(function(){
 			$('.teacher h1 span').text('ver+');
 		} else{
 			$('.teacher h1 span').text('ver-');
-		};
+		}
 	});
 
 	$('.teacher-details p i').on('click', function(){
@@ -88,7 +92,7 @@ $(document).ready(function(){
 		// $('body, html').css('overflow', 'visible')
 		if ( $(window).scrollTop() > 5) {
 			$('nav').show().addClass('nav-scrollup')
-		};
+		}
 	});
 
 	//INSCRIPCION
@@ -116,30 +120,6 @@ $(document).ready(function(){
 			$('#inscripto').val(acronimo);
 			$('.alerta-inscripcion').addClass('show');
 		}
-	});
-
-	// despliega el paso B
-	$('.paso-a').on('click', function(e){
-		e.preventDefault();
-		// $(this).fadeOut();
-		$('.datos-inscripcion').slideDown();
-		$('html, body').stop().animate({
-			'scrollTop': $('.datos-inscripcion').offset().top - 50
-		}, 900, 'swing', function () {
-			//window.location.hash = target;
-		});
-	});
-
-	// despliega el paso C
-	$('.paso-b').on('click', function(e){
-		e.preventDefault();
-		// $(this).fadeOut();
-		$('.datos-estadistica').slideDown();
-		$('html, body').stop().animate({
-			'scrollTop': $('.datos-estadistica').offset().top - 50
-		}, 900, 'swing', function () {
-			//window.location.hash = target;
-		});
 	});
 
 });
@@ -182,7 +162,7 @@ $(window).scroll(function(){
 			}
 		}
 		
-	}; //end if
+	} //end if
 
 	lastScrollTop = st;
 
