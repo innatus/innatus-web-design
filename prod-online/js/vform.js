@@ -75,7 +75,7 @@ $(document).ready(function(){
 
 	$('.paso-c').on('click', function(e){
 		e.preventDefault();
-		alert('submiting...')
+		$('#inscription').submit();
 	});
 
 });
