@@ -1215,6 +1215,7 @@ footer {
     margin-bottom: 20px;
     padding: 10px 5px;
     background-color: #161616;
+    border: 1px solid #161616;
     border-radius: 5px;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
