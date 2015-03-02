@@ -1315,8 +1315,13 @@ input {
       margin-right: 40px;
       color: #ff593d; }
 
-.datos-estadistica h2 {
-  color: gray;
-  font-size: 28px; }
+.datos-inscripcion {
+  display: none; }
+
+.datos-estadistica {
+  display: none; }
+  .datos-estadistica h2 {
+    color: gray;
+    font-size: 28px; }
 
 /*# sourceMappingURL=main.css.map */
