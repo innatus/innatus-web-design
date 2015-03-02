@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# books: http://ogp.me/ns/books#">
 	<meta charset="UTF-8">
 	<title>Inscripción - Innatus</title>
@@ -64,6 +64,7 @@
 	<link rel="stylesheet" type="text/css" href="../../stylesheets/main.css">
 	<link href='http://fonts.googleapis.com/css?family=PT+Sans|PT+Sans+Narrow' rel='stylesheet' type='text/css'>
 	<script type="text/javascript" src="js/modernizr.js"></script>
+	<script src='https://www.google.com/recaptcha/api.js?hl=es'></script>
 </head>
 <body>
 	<div class="page">
@@ -107,7 +108,7 @@
 				</p>
 			</article>
 
-			<form action="" method="post">
+			<form action="inscription.php" method="post">
 
 				<article class="wrapper select-course cf">
 					<!-- SELECCION DE CURSOS -->
@@ -150,15 +151,15 @@
 					<!-- DATOS OBLIGATORIOS -->
 					<h2>Necesitamos que nos des algunos datos escenciales para quedar inscripto en el curso.</h2>
 					<label for="nombre" class="label-titles">¿Cuál es tu nombre? (*)</label>
-					<input class="required" type="text" id="nombre">
+					<input class="required" type="text" name="nombre" id="nombre">
 					<label for="apellido" class="label-titles">¿Cuál es tu apellido? (*)</label>
-					<input class="required" type="text" id="apellido">
+					<input class="required" type="text" name="apellido" id="apellido">
 					<label for="dni" class="label-titles">DNI / Pasaporte (sin puntos ni guiones) (*)</label>
-					<input class="required" type="text" id="dni">
+					<input class="required" type="text" name="dni" id="dni">
 					<label for="email" class="label-titles">¿Cuál es tu e-mail? (*)</label>
-					<input class="required" type="email" id="email">
+					<input class="required" type="email" name="email" id="email">
 					<label for="telefono" class="label-titles">¿A qué número de teléfono podemos llamarte? (*)</label>
-					<input class="required" type="tel" id="telefono">
+					<input class="required" type="tel" name="telefono" id="telefono">
 					<!-- inventar algo aca -->
 					<label class="label-titles">¿Qué día vas a cursar? (según la disponibilidad de cada curso) (*)</label>
 					<div class="radiobuttons">
@@ -305,15 +306,17 @@
 							</label><br>
 					</div>
 					<label for="estudia" class="label-titles">¿Dónde estudiás o estudiaste?</label>
-					<input type="text" id="estudia">
+					<input type="text" name="estudia" id="estudia">
 					<label for="hobbie" class="label-titles">¿Cuál es tu hobbie?</label>
-					<input type="text" id="hobbie">
+					<input type="text" name="hobbie" id="hobbie">
 					<label for="zona" class="label-titles">¿En qué zona vivís?</label>
-					<input type="text" id="zona">
+					<input type="text" name="zona" id="zona">
 					<p class="fa alerta-inscripcion"> Te estás inscribiendo a: <span></span></p>
 					<!-- CONFIRMAR -->
 					<input type="hidden" value="" id="inscripto">
 					<input type="submit" class="btn-secondary centered submit paso-c" value="Confirmar">
+					<br>
+					<div class="g-recaptcha" data-theme="dark" data-sitekey="6Lf13AITAAAAAOAm59SLulbt8Hg-TA3yrodM30vq"></div>
 				</article>
 
 			</form>
