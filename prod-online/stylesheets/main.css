@@ -52,7 +52,7 @@ footer, .push {
     footer, .push {
       height: 90px; } }
 
-.full-title i, .btn-secondary, .wrapper, .description-cont .description-txt, .legal, .certificate, .teacher .teacher-details, .select-course .pick-course {
+.full-title i, .btn-secondary, .wrapper, .description-cont .description-txt, .legal, .certificate, .teacher .teacher-details, input, .select-course .pick-course {
   box-sizing: border-box;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -299,7 +299,7 @@ nav {
 .menues .top {
   display: none;
   margin-left: 80px;
-  color: #f6db4c;
+  color: #ff593d;
   transition: margin 0.4s ease 0s;
   -webkit-transition: margin 0.4s ease 0s;
   -moz-transition: margin 0.4s ease 0s;
@@ -662,6 +662,13 @@ footer {
 .background.b-cursos .price {
   margin-top: 30px;
   margin-bottom: 10px; }
+.background.b-cursos .conocerte {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-size: 40px; }
+  @media screen and (max-width: 640px) {
+    .background.b-cursos .conocerte {
+      font-size: 30px; } }
 .background.b-cursos .duration {
   font-size: 28px; }
   @media screen and (max-width: 480px) {
@@ -1217,12 +1224,19 @@ footer {
 
 .alerta-inscripcion {
   display: block;
+  opacity: 0;
   margin-top: 40px;
   margin-bottom: 20px;
   color: #f6db4c;
   font-size: 18px;
   font-family: "PT Sans", sans-serif;
   text-align: center; }
+  .alerta-inscripcion span {
+    font-style: italic;
+    color: #ff593d; }
+
+.alerta-inscripcion.show {
+  opacity: 1; }
 
 label {
   margin-left: 5px;
@@ -1240,7 +1254,6 @@ input {
   padding: 10px;
   margin-top: 10px;
   margin-bottom: 30px;
-  @@extend %borderBox;
   border-radius: 5px;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;

@@ -1,4 +1,5 @@
 // estilos generales del formulario de inscripcion
+
 .inscripcion
 	padding-bottom: 100px
 	background-color: lighten($black, 10%)
@@ -33,12 +34,20 @@
 
 .alerta-inscripcion
 	display: block
+	opacity: 0
 	margin-top: 40px
 	margin-bottom: 20px
 	color: $info
 	font-size: 18px
 	font-family: $font-primary
 	text-align: center
+
+	span
+		font-style: italic
+		color: $primary
+
+.alerta-inscripcion.show
+	opacity: 1
 
 label
 	margin-left: 5px
@@ -56,7 +65,7 @@ input
 	padding: 10px
 	margin-top: 10px
 	margin-bottom: 30px
-	@@extend %borderBox
+	@extend %borderBox
 	@include borderRadius(5px)
 	@include transition(border-color, 0.3s, 0s)
 	border: 1px solid lighten($black, 8.5%)

@@ -100,10 +100,21 @@ $(document).ready(function(){
 
 	//agrega borde naranja y otros estilo
 	$('.pick-course').on('click', function(){
+		//agarra el titulo del curso
+		var acronimo 	= $(this).find('.acronym').text();
+			titulo		= $(this).find('.course-title').text();
 		if ( $(this).hasClass('active') ) {
 			$(this).removeClass('active');
+			$('.alerta-inscripcion span').text("");
+			$('#inscripto').val("");
+			$('.alerta-inscripcion').removeClass('show');
 		} else {
+			$('.pick-course').removeClass('active');
 			$(this).addClass('active');
+			//pega el titulo del curso
+			$('.alerta-inscripcion span').text(" " + acronimo + " - " + titulo);
+			$('#inscripto').val(acronimo);
+			$('.alerta-inscripcion').addClass('show');
 		}
 	});
 
