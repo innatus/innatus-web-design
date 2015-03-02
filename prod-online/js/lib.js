@@ -107,6 +107,30 @@ $(document).ready(function(){
 		}
 	});
 
+	// despliega el paso B
+	$('.paso-a').on('click', function(e){
+		e.preventDefault();
+		// $(this).fadeOut();
+		$('.datos-inscripcion').slideDown();
+		$('html, body').stop().animate({
+			'scrollTop': $('.datos-inscripcion').offset().top - 50
+		}, 900, 'swing', function () {
+			//window.location.hash = target;
+		});
+	});
+
+	// despliega el paso C
+	$('.paso-b').on('click', function(e){
+		e.preventDefault();
+		// $(this).fadeOut();
+		$('.datos-estadistica').slideDown();
+		$('html, body').stop().animate({
+			'scrollTop': $('.datos-estadistica').offset().top - 50
+		}, 900, 'swing', function () {
+			//window.location.hash = target;
+		});
+	});
+
 });
 
 	

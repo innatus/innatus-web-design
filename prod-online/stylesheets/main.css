@@ -135,6 +135,17 @@ footer, .push {
   margin-left: auto;
   text-align: center; }
 
+.btn-secondary.centered.submit {
+  border: none;
+  background-color: #ff593d;
+  cursor: pointer; }
+  .btn-secondary.centered.submit:hover {
+    background-color: #ff4323; }
+
+.background.b-gral,
+.background.b-home {
+  background: #424854 url(../img/pattern.gif) fixed repeat; }
+
 body, html {
   font-family: "PT Sans", sans-serif;
   height: 100%;
@@ -152,6 +163,10 @@ body, html {
 .wrapper.minwrapper {
   width: 100%;
   max-width: 800px; }
+
+.wrapper.xswrapper {
+  width: 100%;
+  max-width: 600px; }
 
 a, a:hover, a:focus, a:visited {
   text-decoration: none;
@@ -204,14 +219,12 @@ a, a:hover, a:focus, a:visited {
     .header-links a:hover {
       color: #ff593d; }
 
-.background.b-home {
-  background: #424854 url(../img/pattern.gif) fixed repeat; }
-  @media screen and (max-width: 640px) {
-    .background.b-home .slogan {
-      padding-top: 130px; }
-      .background.b-home .slogan span {
-        font-size: 50px;
-        margin-bottom: 10px; } }
+@media screen and (max-width: 640px) {
+  .background.b-home .slogan {
+    padding-top: 130px; }
+    .background.b-home .slogan span {
+      font-size: 50px;
+      margin-bottom: 10px; } }
   @media screen and (max-width: 640px) and (max-width: 480px) {
     .background.b-home .slogan {
       padding-top: 110px; }
@@ -1167,12 +1180,14 @@ footer {
   background: #424854 url(../img/home/b-dtp.jpg) center center no-repeat; }
 
 .inscripcion {
+  padding-bottom: 100px;
   background-color: #1a1a1a; }
   .inscripcion h2 {
     font-family: "PT Sans Narrow", sans-serif;
     color: #ff593d;
     font-size: 40px;
     padding-bottom: 20px;
+    margin-bottom: 80px;
     text-align: center; }
     @media screen and (max-width: 1024px) {
       .inscripcion h2 {
@@ -1186,6 +1201,19 @@ footer {
     @media screen and (max-width: 360px) {
       .inscripcion h2 {
         font-size: 22px; } }
+  .inscripcion .btn-secondary {
+    margin-bottom: 60px; }
+  .inscripcion .radiobuttons {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 10px 5px;
+    background-color: #161616;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    @@extend %borderBox; }
 
 .alerta-inscripcion {
   display: block;
@@ -1195,6 +1223,58 @@ footer {
   font-size: 18px;
   font-family: "PT Sans", sans-serif;
   text-align: center; }
+
+label {
+  margin-left: 5px;
+  font-size: 20px;
+  color: #b3b3b3;
+  cursor: pointer; }
+
+.label-titles {
+  display: block;
+  width: 100%; }
+
+input {
+  width: 100%;
+  background-color: #161616;
+  padding: 10px;
+  margin-top: 10px;
+  margin-bottom: 30px;
+  @@extend %borderBox;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  transition: border-color 0.3s ease 0s;
+  -webkit-transition: border-color 0.3s ease 0s;
+  -moz-transition: border-color 0.3s ease 0s;
+  -ms-transition: border-color 0.3s ease 0s;
+  -o-transition: border-color 0.3s ease 0s;
+  border: 1px solid #161616;
+  font-size: 20px;
+  color: #fff; }
+  input:focus {
+    border: 1px solid #ff593d; }
+  input[type="radio"] {
+    display: none; }
+    input[type="radio"] + label {
+      padding-top: 10px;
+      padding-bottom: 10px;
+      font-size: 20px;
+      color: #e6e6e6;
+      text-align: left; }
+      input[type="radio"] + label:hover {
+        color: #cccccc; }
+      input[type="radio"] + label .fa-circle {
+        display: none; }
+      input[type="radio"] + label .fa-circle-o {
+        color: #4d4d4d; }
+    input[type="radio"]:checked + label .fa-circle {
+      color: #ff593d;
+      display: block; }
+    input[type="radio"]:checked + label .fa-circle-o {
+      display: none; }
 
 .select-course {
   padding-top: 60px;
@@ -1234,5 +1314,9 @@ footer {
       opacity: 1;
       margin-right: 40px;
       color: #ff593d; }
+
+.datos-estadistica h2 {
+  color: gray;
+  font-size: 28px; }
 
 /*# sourceMappingURL=main.css.map */

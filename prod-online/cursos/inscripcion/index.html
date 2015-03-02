@@ -67,7 +67,7 @@
 </head>
 <body>
 	<div class="page">
-		<header class="background b-home b-cursos">
+		<header class="background b-gral b-cursos">
 			<nav>
 				<div class="wrapper">
 					<a href="../../index.html" id="index"><img src="../../img/innatus.png" alt="Innatus Capacitación"></a>
@@ -109,7 +109,7 @@
 
 			<form action="" method="post">
 
-				<article class="wrapper select-course">
+				<article class="wrapper select-course cf">
 					<h2>¿A cuál curso te vas a inscribir?</h2>
 					<div class="pick-course b-csv cf">
 						<a href="#selected" class="full-title cf"><span class="acronym">CSV</span><span class="course-title">Croquizado y Sketching Vehicular</span></a>
@@ -142,11 +142,126 @@
 					</div>
 
 					<p class="fa fa-info-circle alerta-inscripcion"> Te estas inscribiendo a: <span></span></p>
-					<a href="#nada" class="btn-secondary centered paso-a">Siguiente &nbsp; <i class="fa fa-angle-double-right"></i></a>
+					<a href="#" class="btn-secondary centered paso-a">Siguiente &nbsp; <i class="fa fa-angle-double-right"></i></a>
 				</article>
 
-				<article class="wrapper datos-inscripcion">
-					
+				<article class="wrapper minwrapper datos-inscripcion cf">
+					<h2>Estos datos son obligatorios</h2>
+					<label for="nombre" class="label-titles">¿Cuál es tu nombre? (*)</label>
+					<input class="required" type="text" id="nombre">
+					<label for="apellido" class="label-titles">¿Cuál es tu apellido? (*)</label>
+					<input class="required" type="text" id="apellido">
+					<label for="dni" class="label-titles">DNI / Pasaporte (sin puntos ni guiones) (*)</label>
+					<input class="required" type="text" id="dni">
+					<label for="email" class="label-titles">¿Cuál es tu e-mail? (*)</label>
+					<input class="required" type="email" id="email">
+					<label for="telefono" class="label-titles">¿A qué número de teléfono podemos llamarte? (*)</label>
+					<input class="required" type="tel" id="telefono">
+					<!-- inventar algo aca -->
+					<label class="label-titles">¿Qué día vas a cursar según la disponibilidad de cada curso? (*)</label>
+					<div class="radiobuttons">
+						<input type="radio" name="dia" value="semana" id="semana" class="required">
+							<label for="semana">
+								<span class="fa-stack">
+									<i class="fa fa-circle-o fa-stack-1x"></i>
+									<i class="fa fa-circle fa-stack-1x"></i>
+								</span>
+								Día de Semana (según curso y a coordinar)
+							</label><br>
+						<input type="radio" name="dia" value="sabado" id="sabado" class="required">
+							<label for="sabado">
+								<span class="fa-stack">
+									<i class="fa fa-circle-o fa-stack-1x"></i>
+									<i class="fa fa-circle fa-stack-1x"></i>
+								</span>
+								Los Sábados
+							</label><br>
+					</div>
+					<p class="fa fa-info-circle alerta-inscripcion"> Te estas inscribiendo a: <span></span></p>
+					<a href="#" class="btn-secondary centered paso-b">Siguiente &nbsp; <i class="fa fa-angle-double-right"></i></a>
+				</article>
+
+				<article class="wrapper minwrapper datos-estadistica cf">
+					<h2>Tenemos algunas preguntas que no son obligatorias. Pero nos encantaría que las respondas. Son de mucha ayuda y nos sirven para mejorar día a día y así generar nuevas propuestas. Gracias!</h2>
+					<label class="label-titles">¿Cómo nos conociste?</label>
+					<div class="radiobuttons">
+						<input type="radio" name="conocio" value="amigo" id="conocio">
+							<label for="conocio">
+								<span class="fa-stack">
+									<i class="fa fa-circle-o fa-stack-1x"></i>
+									<i class="fa fa-circle fa-stack-1x"></i>
+								</span>
+								Por un amigo fiel
+							</label><br>
+						<input type="radio" name="conocio" value="recomendacion" id="recomendacion">
+							<label for="recomendacion">
+								<span class="fa-stack">
+									<i class="fa fa-circle-o fa-stack-1x"></i>
+									<i class="fa fa-circle fa-stack-1x"></i>
+								</span>
+								Me lo recomendaron
+							</label><br>
+						<input type="radio" name="conocio" value="google" id="google">
+							<label for="google">
+								<span class="fa-stack">
+									<i class="fa fa-circle-o fa-stack-1x"></i>
+									<i class="fa fa-circle fa-stack-1x"></i>
+								</span>
+								Lo vi en una búsqueda de Google
+							</label><br>
+						<input type="radio" name="conocio" value="facebook" id="facebook">
+							<label for="facebook">
+								<span class="fa-stack">
+									<i class="fa fa-circle-o fa-stack-1x"></i>
+									<i class="fa fa-circle fa-stack-1x"></i>
+								</span>
+								Una publicación de Facebook
+							</label><br>
+						<input type="radio" name="conocio" value="twitter" id="twitter">
+							<label for="twitter">
+								<span class="fa-stack">
+									<i class="fa fa-circle-o fa-stack-1x"></i>
+									<i class="fa fa-circle fa-stack-1x"></i>
+								</span>
+								Una publicación de Twitter
+							</label><br>
+						<input type="radio" name="conocio" value="googleplus" id="googleplus">
+							<label for="googleplus">
+								<span class="fa-stack">
+									<i class="fa fa-circle-o fa-stack-1x"></i>
+									<i class="fa fa-circle fa-stack-1x"></i>
+								</span>
+								Una publicación de Google+
+							</label><br>
+						<input type="radio" name="conocio" value="byemail" id="byemail">
+							<label for="byemail">
+								<span class="fa-stack">
+									<i class="fa fa-circle-o fa-stack-1x"></i>
+									<i class="fa fa-circle fa-stack-1x"></i>
+								</span>
+								Me llegó un e-mail
+							</label><br>
+						<input type="radio" name="conocio" value="afiche" id="afiche">
+							<label for="afiche">
+								<span class="fa-stack">
+									<i class="fa fa-circle-o fa-stack-1x"></i>
+									<i class="fa fa-circle fa-stack-1x"></i>
+								</span>
+								Lo vi en un afiche o folleto
+							</label><br>
+					</div>
+					<label for="estudia" class="label-titles">¿Dónde estudiás?</label>
+					<input type="text" id="estudia">
+					<label for="edad" class="label-titles">¿Qué edad tenés?</label>
+					<input type="text" id="edad">
+					<label for="hobbie" class="label-titles">¿Cuál es tu hobbie?</label>
+					<input type="text" id="hobbie">
+					<label for="pasion" class="label-titles">¿Qué te apasiona?</label>
+					<input type="text" id="pasion">
+					<label for="zona" class="label-titles">¿En qué zona vivís?</label>
+					<input type="text" id="zona">
+					<p class="fa fa-info-circle alerta-inscripcion"> Te estas inscribiendo a: <span></span></p>
+					<input type="submit" class="btn-secondary centered submit paso-c" value="Confirmar">
 				</article>
 
 			</form>
