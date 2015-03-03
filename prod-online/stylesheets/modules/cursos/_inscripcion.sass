@@ -1,7 +1,9 @@
 // estilos generales del formulario de inscripcion
+form
+	position: relative
 
 .inscripcion
-	padding-bottom: 100px
+	padding-bottom: 30px
 	background-color: lighten($black, 10%)
 
 	h2
@@ -162,3 +164,26 @@ input
 	h2
 		color: darken($white, 50%)
 		font-size: 28px
+
+// verificacion y reCAPTCHA
+.info-captcha
+	margin-top: 60px
+	margin-bottom: 40px
+	padding: 20px
+	background-color: $info
+	font-size: 18px
+	text-align: center
+	color: $secondary
+	@include borderRadius(5px)
+
+.wrap-captcha
+	position: relative
+	max-width: 320px
+	margin-right: auto
+	margin-left: auto
+	cursor: pointer
+
+// confirm submit
+
+
+

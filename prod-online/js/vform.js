@@ -16,6 +16,7 @@ $(document).ready(function(){
 				//window.location.hash = target;
 			});
 		} else {
+			// error elegir curso
 			alert('elegir curso');
 		}
 
@@ -71,6 +72,39 @@ $(document).ready(function(){
 				$(this).attr('style', '');
 			}
 		}
+	});
+
+	$('.paso-captcha').on('click', function(e){
+		e.preventDefault();
+
+		var	confCurso		= $('#inscripto').val(),
+			confNombre		= $('#nombre').val(),
+			confApellido	= $('#apellido').val(),
+			confDni			= $('#dni').val(),
+			confEmail		= $('#email').val(),
+			confTelefono	= $('#telefono').val();
+
+		$('.modal-dialog.modal-submit').fadeIn();
+
+		$('.conf-curso').text(confCurso);
+		$('.conf-nombre').text(confNombre);
+		$('.conf-apellido').text(confApellido);
+		$('.conf-dni').text(confDni);
+		$('.conf-email').text(confEmail);
+		$('.conf-telefono').text(confTelefono);
+
+	});
+
+	$('.btn-secondary.cancel-conf').on('click', function(e){
+		e.preventDefault();
+		$('.modal-dialog').fadeOut(150);
+		$('html, body').stop().animate({
+			'scrollTop': $('.datos-inscripcion').offset().top - 50
+		}, 900, 'swing', function () {
+			$('nav').fadeOut(100).removeClass('nav-scrollup');
+			$('.menues .top').fadeOut().removeClass('scrollup');
+			$('.menu-top').hide();
+		});
 	});
 
 	$('.paso-c').on('click', function(e){

@@ -1,0 +1,51 @@
+.modal-dialog
+	display: none
+	position: fixed
+	z-index: 100
+	top: 0
+	height: 100%
+	width: 100%
+
+	div
+		position: relative
+		margin-top: 5%
+		@include borderRadius(15px)
+		@extend %borderBox
+		@extend %boxShadow
+		padding: 40px 40px 10px
+		max-width: 600px
+		margin-right: auto
+		margin-left: auto
+
+		h1
+			margin-bottom: 40px
+			font-size: 32px
+			text-align: center
+
+		p
+			max-width: 80%
+			display: block
+			margin-right: auto
+			margin-left: auto
+			margin-top: 10px
+			margin-bottom: 10px
+			font-size: 20px
+
+
+.modal-dialog.modal-submit
+	background-color: transparentize($primary, 0.2)
+
+	div
+		background-color: $white
+
+		h1
+			color: $primary
+
+		p
+			span
+				color: $primary
+
+	.btn-secondary.cancel
+		color: transparentize($black, 0.5)
+
+

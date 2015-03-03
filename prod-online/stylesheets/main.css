@@ -52,14 +52,14 @@ footer, .push {
     footer, .push {
       height: 90px; } }
 
-.full-title i, .btn-secondary, .wrapper, .description-cont .description-txt, .legal, .certificate, .teacher .teacher-details, input, .select-course .pick-course {
+.full-title i, .btn-secondary, .modal-dialog div, .wrapper, .description-cont .description-txt, .legal, .certificate, .teacher .teacher-details, input, .select-course .pick-course {
   box-sizing: border-box;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   -ms-box-sizing: border-box;
   -o-box-sizing: border-box; }
 
-.nav-scrollup {
+.modal-dialog div, .nav-scrollup {
   box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2); }
 
 .full-title {
@@ -142,9 +142,63 @@ footer, .push {
   .btn-secondary.centered.submit:hover {
     background-color: #ff4323; }
 
+.modal-dialog .btn-secondary.centered.submit {
+  margin-bottom: 10px; }
+
+.btn-secondary.centered.cancel {
+  padding: 5px 5px;
+  font-size: 18px;
+  margin-bottom: 20px;
+  border-color: none;
+  color: #424854;
+  cursor: pointer; }
+
 .background.b-gral,
 .background.b-home {
   background: #424854 url(../img/pattern.gif) fixed repeat; }
+
+.modal-dialog {
+  display: none;
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  height: 100%;
+  width: 100%; }
+  .modal-dialog div {
+    position: relative;
+    margin-top: 5%;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+    padding: 40px 40px 10px;
+    max-width: 600px;
+    margin-right: auto;
+    margin-left: auto; }
+    .modal-dialog div h1 {
+      margin-bottom: 40px;
+      font-size: 32px;
+      text-align: center; }
+    .modal-dialog div p {
+      max-width: 80%;
+      display: block;
+      margin-right: auto;
+      margin-left: auto;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      font-size: 20px; }
+
+.modal-dialog.modal-submit {
+  background-color: rgba(255, 89, 61, 0.8); }
+  .modal-dialog.modal-submit div {
+    background-color: #fff; }
+    .modal-dialog.modal-submit div h1 {
+      color: #ff593d; }
+    .modal-dialog.modal-submit div p span {
+      color: #ff593d; }
+  .modal-dialog.modal-submit .btn-secondary.cancel {
+    color: rgba(0, 0, 0, 0.5); }
 
 body, html {
   font-family: "PT Sans", sans-serif;
@@ -1186,8 +1240,11 @@ footer {
 .pick-course.b-dtp {
   background: #424854 url(../img/home/b-dtp.jpg) center center no-repeat; }
 
+form {
+  position: relative; }
+
 .inscripcion {
-  padding-bottom: 100px;
+  padding-bottom: 30px;
   background-color: #1a1a1a; }
   .inscripcion h2 {
     font-family: "PT Sans Narrow", sans-serif;
@@ -1337,5 +1394,26 @@ input {
   .datos-estadistica h2 {
     color: gray;
     font-size: 28px; }
+
+.info-captcha {
+  margin-top: 60px;
+  margin-bottom: 40px;
+  padding: 20px;
+  background-color: #f6db4c;
+  font-size: 18px;
+  text-align: center;
+  color: #424854;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px; }
+
+.wrap-captcha {
+  position: relative;
+  max-width: 320px;
+  margin-right: auto;
+  margin-left: auto;
+  cursor: pointer; }
 
 /*# sourceMappingURL=main.css.map */

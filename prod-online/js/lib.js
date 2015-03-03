@@ -15,6 +15,24 @@ function superScrollDown(scrollToX){
 	return true;
 }
 
+
+$(document).keyup(function(e) {
+	// Tecla ESC
+	if (e.keyCode == 27) { 
+
+		// Oculta los modal
+		$('.modal-dialog').fadeOut(150);
+
+		// Se cierra el menú
+		$('.expanded-menu').fadeOut(100);
+		$('.menu-items').removeClass('expand');
+		// $('body, html').css('overflow', 'visible')
+		if ( $(window).scrollTop() > 5) {
+			$('nav').show().addClass('nav-scrollup')
+		}
+	}
+});
+
 $(document).ready(function(){
 
 	if ( $(window) <= 0) {
