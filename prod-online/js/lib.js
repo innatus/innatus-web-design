@@ -113,6 +113,13 @@ $(document).ready(function(){
 		}
 	});
 
+	// Salir de un modal
+	$('.btn-secondary.esc').on('click', function(e){
+		e.preventDefault();
+		$('.modal-dialog').fadeOut(150);
+	});
+	
+
 	//INSCRIPCION
 
 	//previene link del a

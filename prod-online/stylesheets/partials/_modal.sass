@@ -31,15 +31,15 @@
 			margin-bottom: 10px
 			font-size: 20px
 
-
+// MODAL SUBMIT
 .modal-dialog.modal-submit
-	background-color: transparentize($primary, 0.2)
+	background-color: transparentize($secondary, 0.2)
 
 	div
 		background-color: $white
 
 		h1
-			color: $primary
+			color: $secondary
 
 		p
 			span
@@ -47,5 +47,24 @@
 
 	.btn-secondary.cancel
 		color: transparentize($black, 0.5)
+
+
+// MODAL ERROR
+.modal-dialog.modal-error
+	background-color: transparentize($error, 0.2)
+
+	div
+		background-color: $white
+
+		h1
+			color: $error
+
+		p
+			display: block
+			text-align: center
+
+			span
+				display: block
+				color: $error
 
 

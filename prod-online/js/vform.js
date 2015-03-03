@@ -17,7 +17,9 @@ $(document).ready(function(){
 			});
 		} else {
 			// error elegir curso
-			alert('elegir curso');
+			$('.modal-dialog.modal-error').fadeIn().find('h1').text("Error");
+			$('.modal-dialog.modal-error').fadeIn().find('p').text("Tenés que elegir un curso");
+			// alert('elegir curso');
 		}
 
 	});
@@ -53,8 +55,12 @@ $(document).ready(function(){
 				//window.location.hash = target;
 			});
 		} else {
+			// Modal sumatoria de errores
 			names = names.substring(0, names.length - 2);
-			alert('debe completar los campos: ' + names );
+			$('.modal-dialog.modal-error').fadeIn().find('h1').text("Error");
+			// $('.modal-dialog.modal-error').fadeIn().find('span').text(names);
+			$('.modal-dialog.modal-error').fadeIn().find('p').html("Tenés que completar los campos: <span>" + names + "</span>");
+			// alert('debe completar los campos: ' + names );
 		}
 
 	});
