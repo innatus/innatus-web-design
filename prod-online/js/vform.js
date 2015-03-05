@@ -13,13 +13,11 @@ $(document).ready(function(){
 			$('html, body').stop().animate({
 				'scrollTop': $('.datos-inscripcion').offset().top - 50
 			}, 900, 'swing', function () {
-				//window.location.hash = target;
+				// window.location.hash = target;
 			});
 		} else {
 			// error elegir curso
-			$('.modal-dialog.modal-error').fadeIn().find('h1').text("Error");
-			$('.modal-dialog.modal-error').fadeIn().find('p').text("Tenés que elegir un curso");
-			// alert('elegir curso');
+			showModal('Error', 'Tenés que elegir un curso');
 		}
 
 	});
@@ -27,42 +25,7 @@ $(document).ready(function(){
 	// despliega el paso C
 	$('.paso-b').on('click', function(e){
 		e.preventDefault();
-
-		var names = '';
-
-		$('.datos-inscripcion .required').each( function( i, val ) {
-			if ( $(this).val() == '' ) {
-				names += $(this).attr('id') + ', ';
-				$(this).css('border', '1px solid red');
-			}
-		});
-
-		if ($("input[name='dia']:checked").length == 0){
-			names += 'dia de cursada, ';
-			$('.radiobuttons').css('border', '1px solid red');
-		}
-
-		if ( !valemail($('#email').val()) && $('#email').val() !== '' ) {
-			names += 'email incorrecto, ';
-			$('#email').css('border', '1px solid red');
-		}
-
-		if (names == '') {
-			$('.datos-estadistica').slideDown();
-			$('html, body').stop().animate({
-				'scrollTop': $('.datos-estadistica').offset().top - 50
-			}, 900, 'swing', function () {
-				//window.location.hash = target;
-			});
-		} else {
-			// Modal sumatoria de errores
-			names = names.substring(0, names.length - 2);
-			$('.modal-dialog.modal-error').fadeIn().find('h1').text("Error");
-			// $('.modal-dialog.modal-error').fadeIn().find('span').text(names);
-			$('.modal-dialog.modal-error').fadeIn().find('p').html("Tenés que completar los campos: <span>" + names + "</span>");
-			// alert('debe completar los campos: ' + names );
-		}
-
+		validateStage1(1);
 	});
 
 	$('.radiobuttons input').on('click', function(e){
@@ -83,21 +46,17 @@ $(document).ready(function(){
 	$('.paso-captcha').on('click', function(e){
 		e.preventDefault();
 
-		var	confCurso		= $('#inscripto').val(),
-			confNombre		= $('#nombre').val(),
-			confApellido	= $('#apellido').val(),
-			confDni			= $('#dni').val(),
-			confEmail		= $('#email').val(),
-			confTelefono	= $('#telefono').val();
+		if ( validateStage1(2) ) {
 
-		$('.modal-dialog.modal-submit').fadeIn();
+			$('.conf-curso').text( $('#inscripto').val() );
+			$('.conf-nombre').text( $('#nombre').val() );
+			$('.conf-apellido').text( $('#apellido').val() );
+			$('.conf-dni').text( $('#dni').val() );
+			$('.conf-email').text( $('#email').val() );
+			$('.conf-telefono').text( $('#telefono').val() );
 
-		$('.conf-curso').text(confCurso);
-		$('.conf-nombre').text(confNombre);
-		$('.conf-apellido').text(confApellido);
-		$('.conf-dni').text(confDni);
-		$('.conf-email').text(confEmail);
-		$('.conf-telefono').text(confTelefono);
+			$('.modal-dialog.modal-submit').fadeIn();
+		}
 
 	});
 
@@ -123,4 +82,67 @@ $(document).ready(function(){
 function valemail(email) {
     var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     return re.test(email);
+}
+
+function showModal(title, body) {
+	$('.modal-dialog.modal-error')
+		.fadeIn().find('h1').text(title);
+	$('.modal-dialog.modal-error')
+		.fadeIn().find('p').html(body);
+}
+
+function validateStage1(stage) {
+
+	var names = '';
+
+	coursePicked = $('.pick-course').hasClass('active');
+
+	if ( !coursePicked ) {
+		showModal('Error', 'Tenés que elegir un curso');
+	}
+
+	$('.datos-inscripcion .required').each( function( i, val ) {
+		if ( $(this).val() == '' ) {
+			names += $(this).attr('id') + ', ';
+			$(this).css('border', '1px solid red');
+		} else {
+			if ($(this).attr('type') !== 'radio' )
+				$(this).addClass('validated-ok');
+		}
+	});
+
+	if ($("input[name='dia']:checked").length == 0){
+		names += 'dia de cursada, ';
+		$('.radiobuttons').css('border', '1px solid red');
+	} else {
+		$('.radiobuttons:first').addClass('validated-ok');
+	}
+
+	if ( !valemail($('#email').val()) && $('#email').val() !== '' ) {
+		names += 'email incorrecto, ';
+		$('#email').css('border', '1px solid red');
+	} else {
+		$('#email').addClass('validated-ok');
+	}
+
+	if (names == '') {
+		if ( stage == 1 ) {
+
+			$('.datos-estadistica').slideDown();
+			$('html, body').stop().animate({
+				'scrollTop': $('.datos-estadistica').offset().top - 50
+			}, 900, 'swing', function () {
+				// window.location.hash = target;
+			});
+
+		} else {
+			return true;
+		}
+	} else {
+		// Modal sumatoria de errores
+		names = names.substring(0, names.length - 2);
+		body = "Tenés que completar los campos: <span>" + names + "</span>";
+		showModal('Error', body);
+	}
+
 }
