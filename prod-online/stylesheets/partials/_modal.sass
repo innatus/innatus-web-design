@@ -6,16 +6,31 @@
 	height: 100%
 	width: 100%
 
+	// div
+	// 	position: relative
+	// 	margin-top: 5%
+	// 	@include borderRadius(15px)
+	// 	@extend %borderBox
+	// 	@extend %boxShadow
+	// 	padding: 40px 40px 10px
+	// 	max-width: 600px
+	// 	margin-right: auto
+	// 	margin-left: auto
+
 	div
-		position: relative
-		margin-top: 5%
+		position: absolute
+		top: 50%
+		left: 50%
+		width: 100%
+		max-width: 600px
+		transform: translate(-50%, -50%)
 		@include borderRadius(15px)
 		@extend %borderBox
 		@extend %boxShadow
 		padding: 40px 40px 10px
-		max-width: 600px
-		margin-right: auto
-		margin-left: auto
+		// margin-right: auto
+		// margin-left: auto
+
 
 		h1
 			margin-bottom: 40px
@@ -31,6 +46,42 @@
 			margin-bottom: 10px
 			font-size: 20px
 
+	@media screen and (max-width: 640px)
+		div
+			max-width: 100%
+			height: 100%
+			padding: 15px 30px
+			@include borderRadius(0)
+
+			h1
+				margin-bottom: 25px
+				margin-top: 10px
+				font-size: 25px
+
+			p
+				float: left
+				width: 50%
+				font-size: 16px
+				padding-bottom: 10px
+				border-bottom: 1px solid darken($white, 10%)
+
+	@media screen and (max-width: 479px)
+		div
+			p
+				float: none
+				width: 100%
+
+	// @media screen and (max-width: 360px)
+	// 	div
+	// 		margin: 2px
+
+	// 		h1
+	// 			font-size: 20px
+
+	// 		p
+	// 			font-size: 16px
+
+			
 // MODAL SUBMIT
 .modal-dialog.modal-submit
 	background-color: transparentize($secondary, 0.2)
@@ -47,6 +98,12 @@
 
 	.btn-secondary.cancel
 		color: transparentize($black, 0.5)
+		@media screen and (max-width: 640px)
+			margin-top: 20px
+			margin-bottom: 5px
+		@media screen and (max-width: 480px)
+			margin-bottom: 10px
+
 
 
 // MODAL ERROR
