@@ -5,13 +5,17 @@
 - - -
 ####Tecnologías
 SASS
+
 JS
+
 HTML
+
 INKSCAPE
 
 - - -
 ####Desarrolladores:
 [Nicolás Danelón](https://github.com/nicolasdanelon)
+
 [Lucas Romero Di Benedetto](https://github.com/lucasromerodb)
 
 
