@@ -2,9 +2,9 @@
 ######Diseño e implementación del sitio web [innatus](http://www.innatus.com.ar) (cursos de capacitación web, 3d, animación y sketching)
 - - -
 ####Desarrolladores:
-[Nicolás Danelón](https://github.com/nicolasdanelon)
+Nicolás Danelón: [Github](https://github.com/nicolasdanelon) / [CV-Porfolio](http://nicolasmd.com.ar/)
 
-[Lucas Romero Di Benedetto](https://github.com/lucasromerodb)
+Lucas Romero Di Benedetto: [Github](https://github.com/lucasromerodb) / [CV-Porfolio](http://lucasromerodb.github.io/cv/)
 - - -
 ####Tecnologías utilizadas:
 SASS (CSS), JS, PHP, HTML e [Inkscape](http://inkscape.org/) para el diseño del sitio.
