@@ -1,4 +1,6 @@
 .full-title
+	position: relative
+	z-index: 5
 	float: left
 	display: block
 	// width: 100%
@@ -53,3 +55,32 @@
 
 	&:hover
 		background-color: transparentize($white, 0.9)
+
+.btn-secondary.centered
+	margin-top: 40px
+	float: none
+	display: block
+	max-width: 190px
+	margin-right: auto
+	margin-left: auto
+	text-align: center
+
+.btn-secondary.centered.submit
+	border: none
+	background-color: $primary
+	cursor: pointer
+
+	&:hover
+		background-color: darken($primary, 5%)
+
+.modal-dialog
+	.btn-secondary.centered.submit
+		margin-bottom: 10px
+
+.btn-secondary.centered.cancel
+	padding: 5px 5px
+	font-size: 18px
+	margin-bottom: 20px
+	border-color: none
+	color: $secondary
+	cursor: pointer

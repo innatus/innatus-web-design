@@ -1,16 +1,23 @@
 // NAV MENU
-header
-	nav
-		width: 100%
-		z-index: 3
-		position: absolute
-		padding: 20px 0
-		background-color: $transp
-	
-		#index
-			float: left
+nav
+	width: 100%
+	z-index: 11
+	position: fixed
+	padding: 20px 0
+	background-color: $transp
+	@include transition(background-color, 0.2s, 0s)
+	// @include transition(padding, 0.2s, 0s)
+	// @include transition(background-color, 0.5s, 0s)
 
-.menu
+	#index
+		float: left
+
+.nav-scrollup
+	background-color: $secondary
+	@extend %boxShadow
+
+.menu,
+.menu-top
 	display: none
 	float: right
 	color: $white
@@ -23,8 +30,14 @@ header
 	&:hover
 		color: $primary
 
+.menu
 	@media screen and (max-width: 768px)
 		display: block
+
+.menu-top
+	margin-right: 30px
+	font-size: 15px
+	margin-top: 5px
 
 .menues
 	a
@@ -40,4 +53,13 @@ header
 
 		@media screen and (max-width: 768px)
 			display: none
+
+	.top
+		display: none
+		margin-left: 80px
+		color: $primary
+		@include transition(margin, 0.4s, 0s)
+
+	.top.scrollup
+		margin-left: 20px
 
