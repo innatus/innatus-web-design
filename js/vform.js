@@ -7,6 +7,15 @@ $(document).ready(function(){
 		$(".radiobuttons").attr('style', '');
 	});
 
+	// PREVIENE QUE EL USUARIO ENVIE EL FORMULARIO CON LA TECLA 'ENTER'
+	$('#inscription').on("keyup keypress", function(e) {
+	  var code = e.keyCode || e.which; 
+	  if (code  == 13) {               
+	    e.preventDefault();
+	    return false;
+	  }
+	});
+
 	// se va el borde rojo si está bien al hacer Blur
 	$('.datos-inscripcion input').on('click, blur', function(e){
 		if ( $(this).val() != ''){
@@ -28,8 +37,9 @@ $(document).ready(function(){
 	// SIGUIENTE datos alumnos
 	$('.paso-b').on('click', function(e){
 		e.preventDefault();
-		pickCourse(0);
-		validateStage(2);
+		if ( pickCourse(0) ) {
+			validateStage(2);
+		};
 	});
 
 	// SIGUIENTE reCaptcha
@@ -159,9 +169,10 @@ function pickCourse(stage) {
 		});
 	} else {
 		if ( stage == 1 ) {
+			// $('.paso-b')
 			$('.datos-inscripcion').slideDown();
 			$('html, body').stop().animate({
-			'scrollTop': $('.datos-inscripcion').offset().top
+			'scrollTop': $('.datos-inscripcion').offset().top -50
 			}, 800, 'swing', function () {
 			 	// OCULTA NAV AL SCROLL-UP
 			 	scrollupNavHide();
