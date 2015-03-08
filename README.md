@@ -1,3 +1,6 @@
+![Imágen referencia](http://innatus.com.ar/img/metaimg.jpg)
+
+
 ![GitHub Logo](http://innatus.com.ar/img/innatus_newsletter.png)
 #####Diseño e implementación del sitio web [www.innatus.com.ar](http://www.innatus.com.ar)
 
