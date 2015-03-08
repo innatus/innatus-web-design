@@ -46,8 +46,10 @@ form
 	text-align: center
 
 	span
-		font-style: italic
 		color: $primary
+		@media screen and (max-width: 640px)
+			display: block
+			margin-top: 20px
 
 .alerta-inscripcion.show
 	opacity: 1
@@ -125,9 +127,32 @@ input
 		background-size: 100% auto
 		cursor: pointer
 		border: 5px solid lighten($black, 10%)
+		@media screen and (max-width: 640px)
+			background-size: cover
+			padding: 20px 0
+
 
 		a
 			margin-left: 40px
+			@media screen and (max-width: 640px)
+				margin-left: 20px
+				margin-right: 20px
+				font-size: 22px
+
+			span
+				@media screen and (max-width: 480px)
+					padding: 5px 8px
+					font-size: 18px
+
+			.course-title
+				@media screen and (max-width: 480px)
+					display: block
+					padding-left: 0
+					width: 100%
+					font-size: 20px
+
+			
+
 
 		.fa
 			// display: none
@@ -140,6 +165,14 @@ input
 			margin-top: 5px
 			color: $white
 			@include transitions(0.2s, 0s )
+			@media screen and (max-width: 768px)
+				opacity: 0.5
+				margin-right: 30px
+			@media screen and (max-width: 480px)
+				float: left
+				font-size: 20px
+				padding-left: 20px
+
 
 		&:hover
 			
@@ -147,6 +180,9 @@ input
 				// display: block
 				opacity: 0.5
 				margin-right: 40px
+				@media screen and (max-width: 768px)
+					margin-right: 30px
+					opacity: 0.5
 
 	.pick-course.active
 		border: 5px solid $primary
@@ -154,6 +190,8 @@ input
 			opacity: 1
 			margin-right: 40px
 			color: $primary
+			@media screen and (max-width: 768px)
+				margin-right: 30px
 
 // completar datos necesarios
 .datos-inscripcion

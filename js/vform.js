@@ -1,5 +1,22 @@
 $(document).ready(function(){
 
+	// SI LA VENTANA TIENE #HASH
+	if (location.hash) {
+
+		// HACER QUE LA VENTANA SE POSICINE EN DETERMINADO LUGAR Y SCROLLEE (PARCHE DE ISSUE #2 EN GITHUB: https://github.com/innatus/innatus-web-design/issues/2)
+		window.scrollTo(0, 10);
+		$('html, body').animate({
+			'scrollTop': 0
+		}, 300);
+
+		// MUESTRA EL TEXTO INDICANDO A QUE CURSO ME VOY A INSCRIBIR EN BASE AL #HASH
+		var acronimo	= $(window.location.hash).find('.acronym').text(),
+			titulo		= $(window.location.hash).find('.course-title').text();
+		
+		$('.alerta-inscripcion span').text(" " + acronimo + " - " + titulo);
+		$('.alerta-inscripcion').addClass('show');
+	}
+
 	$(window.location.hash).addClass('active');
 	$('#inscripto').val(window.location.hash);
 
@@ -11,8 +28,8 @@ $(document).ready(function(){
 	$('#inscription').on("keyup keypress", function(e) {
 	  var code = e.keyCode || e.which; 
 	  if (code  == 13) {               
-	    e.preventDefault();
-	    return false;
+		e.preventDefault();
+		return false;
 	  }
 	});
 
@@ -72,8 +89,8 @@ $(document).ready(function(){
 
 // VALIDA el mail
 function valemail(email) {
-    var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    return re.test(email);
+	var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+	return re.test(email);
 }
 
 // MODAL texto 
@@ -131,8 +148,8 @@ function validateStage(stage) {
 			$('html, body').stop().animate({
 			'scrollTop': $('.datos-estadistica').offset().top -50
 			}, 800, 'swing', function () {
-			 	// OCULTA NAV AL SCROLL-UP
-			 	scrollupNavHide();
+				// OCULTA NAV AL SCROLL-UP
+				scrollupNavHide();
 			});
 		} else {
 			// SINO CONFIRM-CALL-FUNC. DONE!
@@ -169,13 +186,12 @@ function pickCourse(stage) {
 		});
 	} else {
 		if ( stage == 1 ) {
-			// $('.paso-b')
 			$('.datos-inscripcion').slideDown();
 			$('html, body').stop().animate({
 			'scrollTop': $('.datos-inscripcion').offset().top -50
 			}, 800, 'swing', function () {
-			 	// OCULTA NAV AL SCROLL-UP
-			 	scrollupNavHide();
+				// OCULTA NAV AL SCROLL-UP
+				scrollupNavHide();
 			});
 		} else {
 			return true;

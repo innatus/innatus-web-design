@@ -153,6 +153,9 @@ footer, .push {
   color: #424854;
   cursor: pointer; }
 
+.btn-secondary.btn-hide {
+  opacity: 0; }
+
 .background.b-gral,
 .background.b-home {
   background: #424854 url(../img/pattern.gif) fixed repeat; }
@@ -223,7 +226,7 @@ footer, .push {
     .modal-dialog.modal-submit div p span {
       color: #ff593d; }
   .modal-dialog.modal-submit .btn-secondary.cancel {
-    color: rgba(0, 0, 0, 0.5); }
+    color: #ff593d; }
     @media screen and (max-width: 640px) {
       .modal-dialog.modal-submit .btn-secondary.cancel {
         margin-top: 20px;
@@ -352,7 +355,7 @@ nav {
     float: left; }
 
 .nav-scrollup {
-  background-color: #424854; }
+  background-color: #1a1a1a; }
 
 .menu,
 .menu-top {
@@ -399,6 +402,7 @@ nav {
       display: none; } }
 .menues .top {
   display: none;
+  float: left;
   margin-left: 80px;
   color: #ff593d;
   transition: margin 0.4s ease 0s;
@@ -1337,8 +1341,11 @@ form {
   font-family: "PT Sans", sans-serif;
   text-align: center; }
   .alerta-inscripcion span {
-    font-style: italic;
     color: #ff593d; }
+    @media screen and (max-width: 640px) {
+      .alerta-inscripcion span {
+        display: block;
+        margin-top: 20px; } }
 
 .alerta-inscripcion.show {
   opacity: 1; }
@@ -1407,8 +1414,27 @@ input {
     background-size: 100% auto;
     cursor: pointer;
     border: 5px solid #1a1a1a; }
+    @media screen and (max-width: 640px) {
+      .select-course .pick-course {
+        background-size: cover;
+        padding: 20px 0; } }
     .select-course .pick-course a {
       margin-left: 40px; }
+      @media screen and (max-width: 640px) {
+        .select-course .pick-course a {
+          margin-left: 20px;
+          margin-right: 20px;
+          font-size: 22px; } }
+      @media screen and (max-width: 480px) {
+        .select-course .pick-course a span {
+          padding: 5px 8px;
+          font-size: 18px; } }
+      @media screen and (max-width: 480px) {
+        .select-course .pick-course a .course-title {
+          display: block;
+          padding-left: 0;
+          width: 100%;
+          font-size: 20px; } }
     .select-course .pick-course .fa {
       opacity: 0;
       position: relative;
@@ -1423,15 +1449,31 @@ input {
       -moz-transition: all 0.2s ease 0s;
       -ms-transition: all 0.2s ease 0s;
       -o-transition: all 0.2s ease 0s; }
+      @media screen and (max-width: 768px) {
+        .select-course .pick-course .fa {
+          opacity: 0.5;
+          margin-right: 30px; } }
+      @media screen and (max-width: 480px) {
+        .select-course .pick-course .fa {
+          float: left;
+          font-size: 20px;
+          padding-left: 20px; } }
     .select-course .pick-course:hover .fa {
       opacity: 0.5;
       margin-right: 40px; }
+      @media screen and (max-width: 768px) {
+        .select-course .pick-course:hover .fa {
+          margin-right: 30px;
+          opacity: 0.5; } }
   .select-course .pick-course.active {
     border: 5px solid #ff593d; }
     .select-course .pick-course.active .fa {
       opacity: 1;
       margin-right: 40px;
       color: #ff593d; }
+      @media screen and (max-width: 768px) {
+        .select-course .pick-course.active .fa {
+          margin-right: 30px; } }
 
 .datos-inscripcion {
   display: none; }
