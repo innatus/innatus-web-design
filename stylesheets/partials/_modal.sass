@@ -134,6 +134,33 @@
 	.btn-secondary.cancel
 		@media screen and (max-width: 640px)
 			border: none
+
+.modal-dialog.modal-success
+	background-color: transparentize($success, 0.2)
+
+	div
+		background-color: $white
+		@media screen and (max-width: 640px)
+			background-color: lighten($success, 47%)
+
+		h1
+			color: $success
+
+		p
+			display: block
+			text-align: center
+
+			span
+				display: block
+				color: $success
+
+	.btn-secondary.cancel
+		@media screen and (max-width: 640px)
+			border: none
+
+.modal-dialog.modal-visible
+	display: block
+
 		
 
 

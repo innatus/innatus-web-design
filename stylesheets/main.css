@@ -260,6 +260,28 @@ footer, .push {
     .modal-dialog.modal-error .btn-secondary.cancel {
       border: none; } }
 
+.modal-dialog.modal-success {
+  background-color: rgba(66, 189, 65, 0.8); }
+  .modal-dialog.modal-success div {
+    background-color: #fff; }
+    @media screen and (max-width: 640px) {
+      .modal-dialog.modal-success div {
+        background-color: #f3fbf3; } }
+    .modal-dialog.modal-success div h1 {
+      color: #42BD41; }
+    .modal-dialog.modal-success div p {
+      display: block;
+      text-align: center; }
+      .modal-dialog.modal-success div p span {
+        display: block;
+        color: #42BD41; }
+  @media screen and (max-width: 640px) {
+    .modal-dialog.modal-success .btn-secondary.cancel {
+      border: none; } }
+
+.modal-dialog.modal-visible {
+  display: block; }
+
 body, html {
   font-family: "PT Sans", sans-serif;
   height: 100%;
