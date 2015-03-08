@@ -207,8 +207,6 @@ footer, .push {
         margin-top: 10px;
         font-size: 25px; }
       .modal-dialog div p {
-        float: left;
-        width: 50%;
         font-size: 16px;
         padding-bottom: 10px;
         border-bottom: 1px solid #e6e6e6; } }
@@ -221,12 +219,20 @@ footer, .push {
   background-color: rgba(66, 72, 84, 0.8); }
   .modal-dialog.modal-submit div {
     background-color: #fff; }
+    @media screen and (max-width: 640px) {
+      .modal-dialog.modal-submit div {
+        background-color: #fbdad9; } }
     .modal-dialog.modal-submit div h1 {
       color: #424854; }
     .modal-dialog.modal-submit div p span {
       color: #ff593d; }
+    @media screen and (max-width: 640px) {
+      .modal-dialog.modal-submit div p {
+        float: left;
+        width: 50%; } }
   .modal-dialog.modal-submit .btn-secondary.cancel {
-    color: #ff593d; }
+    color: #ff593d;
+    border: none; }
     @media screen and (max-width: 640px) {
       .modal-dialog.modal-submit .btn-secondary.cancel {
         margin-top: 20px;
@@ -239,6 +245,9 @@ footer, .push {
   background-color: rgba(208, 23, 21, 0.8); }
   .modal-dialog.modal-error div {
     background-color: #fff; }
+    @media screen and (max-width: 640px) {
+      .modal-dialog.modal-error div {
+        background-color: #fbdad9; } }
     .modal-dialog.modal-error div h1 {
       color: #D01715; }
     .modal-dialog.modal-error div p {
@@ -247,6 +256,9 @@ footer, .push {
       .modal-dialog.modal-error div p span {
         display: block;
         color: #D01715; }
+  @media screen and (max-width: 640px) {
+    .modal-dialog.modal-error .btn-secondary.cancel {
+      border: none; } }
 
 body, html {
   font-family: "PT Sans", sans-serif;
@@ -1355,6 +1367,12 @@ label {
   font-size: 20px;
   color: #b3b3b3;
   cursor: pointer; }
+  @media screen and (max-width: 640px) {
+    label {
+      font-size: 18px; } }
+  @media screen and (max-width: 360px) {
+    label {
+      font-size: 16px; } }
 
 .label-titles {
   display: block;
@@ -1379,6 +1397,9 @@ input {
   border: 1px solid #111111;
   font-size: 20px;
   color: #fff; }
+  @media screen and (max-width: 360px) {
+    input {
+      font-size: 18px; } }
   input:focus {
     border: 1px solid #ff593d; }
   input[type="radio"] {
@@ -1389,6 +1410,10 @@ input {
       font-size: 20px;
       color: #e6e6e6;
       text-align: left; }
+      @media screen and (max-width: 640px) {
+        input[type="radio"] + label {
+          font-size: 16px;
+          line-height: 50px; } }
       input[type="radio"] + label:hover {
         color: #cccccc; }
       input[type="radio"] + label .fa-circle {
@@ -1483,6 +1508,9 @@ input {
   .datos-estadistica h2 {
     color: gray;
     font-size: 28px; }
+    @media screen and (max-width: 640px) {
+      .datos-estadistica h2 {
+        font-size: 22px; } }
 
 .info-captcha {
   margin-top: 60px;
