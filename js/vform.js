@@ -70,7 +70,8 @@ $(document).ready(function(){
 	// CONFIRMA submit
 	$('.paso-c').on('click', function(e){
 		e.preventDefault();
-		$('#inscription').submit();
+		$('.modal-dialog.modal-interaccion').show();
+		$('#inscription').delay(2000).submit();
 	});
 
 	// MODIFICAR Confirm submit
@@ -150,7 +151,9 @@ function validateStage(stage) {
 			}, 800, 'swing', function () {
 				// OCULTA NAV AL SCROLL-UP
 				scrollupNavHide();
+				$('.wrap-captcha, .paso-captcha').show().css('display', 'block');
 			});
+
 		} else {
 			// SINO CONFIRM-CALL-FUNC. DONE!
 			confirmForm();

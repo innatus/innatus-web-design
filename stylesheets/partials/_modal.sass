@@ -6,31 +6,20 @@
 	height: 100%
 	width: 100%
 
-	// div
-	// 	position: relative
-	// 	margin-top: 5%
-	// 	@include borderRadius(15px)
-	// 	@extend %borderBox
-	// 	@extend %boxShadow
-	// 	padding: 40px 40px 10px
-	// 	max-width: 600px
-	// 	margin-right: auto
-	// 	margin-left: auto
-
 	div
 		position: absolute
 		top: 50%
 		left: 50%
 		width: 100%
 		max-width: 600px
-		transform: translate(-50%, -50%)
+		-webkit-transform: translate(-50%, -50%)
+		-moz-transform: translate(-50%, -50%)
+		-ms-transform: translate(-50%, -50%)
+		-o-transform: translate(-50%, -50%)
 		@include borderRadius(15px)
 		@extend %borderBox
 		@extend %boxShadow
 		padding: 40px 40px 10px
-		// margin-right: auto
-		// margin-left: auto
-
 
 		h1
 			margin-bottom: 40px
@@ -69,17 +58,6 @@
 			p
 				float: none
 				width: 100%
-
-	// @media screen and (max-width: 360px)
-	// 	div
-	// 		margin: 2px
-
-	// 		h1
-	// 			font-size: 20px
-
-	// 		p
-	// 			font-size: 16px
-
 			
 // MODAL SUBMIT
 .modal-dialog.modal-submit
@@ -88,7 +66,7 @@
 	div
 		background-color: $white
 		@media screen and (max-width: 640px)
-			background-color: lighten($error, 47%)
+			background-color: lighten($success, 47%)
 
 		h1
 			color: $secondary
@@ -96,6 +74,9 @@
 		p
 			span
 				color: $primary
+				@media screen and (max-width: 360px)
+				display: block
+				
 			@media screen and (max-width: 640px)
 				float: left
 				width: 50%
@@ -157,6 +138,21 @@
 	.btn-secondary.cancel
 		@media screen and (max-width: 640px)
 			border: none
+
+.modal-dialog.modal-interaccion
+	z-index: 200
+	background-color: $white
+
+	img
+		position: absolute
+		top: 50%
+		left: 50%
+		width: 200px
+		-webkit-transform: translate(-50%, -50%)
+		-moz-transform: translate(-50%, -50%)
+		-ms-transform: translate(-50%, -50%)
+		-o-transform: translate(-50%, -50%)
+		display: block
 
 .modal-dialog.modal-visible
 	display: block
