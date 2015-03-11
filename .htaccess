@@ -1,1 +1,3 @@
-Options -Indexes
+RewriteEngine on
+RewriteCond %{HTTP_HOST} ^innatus.com.ar[nc]
+RewriteRule ^(.*)$ http://www.innatus.com.ar/$1 [r=301,nc]
