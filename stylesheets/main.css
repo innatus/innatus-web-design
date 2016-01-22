@@ -140,7 +140,7 @@ footer, .push {
   background-color: #ff593d;
   cursor: pointer; }
   .btn-secondary.centered.submit:hover {
-    background-color: #ff4323; }
+    background-color: #ff4324; }
 
 .modal-dialog .btn-secondary.centered.submit {
   margin-bottom: 10px; }
@@ -611,7 +611,7 @@ nav {
   padding-top: 50px;
   padding-bottom: 50px; }
   .opensource img {
-    width: 20%;
+    width: 30%;
     float: left; }
     @media screen and (max-width: 480px) {
       .opensource img {
@@ -625,9 +625,11 @@ nav {
         width: 50%; } }
   .opensource p {
     float: right;
-    margin-top: 15px;
-    font-size: 20px;
-    width: 70%; }
+    margin-top: 10px;
+    font-size: 19px;
+    width: 60%; }
+    .opensource p b {
+      color: #424854; }
     @media screen and (max-width: 640px) {
       .opensource p {
         font-size: 16px; } }
