@@ -1,7 +1,10 @@
 // bg generales
 $bg-poly: $secondary url(../img/pattern.gif) fixed repeat
+$bg-poly-m: $secondary url(../img/pattern.gif) scroll repeat
 $bg-secondary: $secondary url(../img/pattern.png) repeat
 
 .background.b-gral,
 .background.b-home
 	background: $bg-poly
+	@media screen and (max-width: 768)
+		background: $bg-poly-m
