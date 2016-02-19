@@ -15,31 +15,34 @@
 		margin-top: 20px
 
 	.menu-items
-		margin-top: 200px
+		margin-top: 40px
 		padding: 5px 50px
 		@include transitions(0.2s, 0.1s)
 
 		a
 			display: block
-			padding-bottom: 70px
-			font-size: 40px
+			padding-bottom: 60px
+			font-size: 2rem
 			color: transparent
-			text-align: center
+			text-align: left
 			font-family: $font-secondary
 			@include transitions(0.4s, 0.2s)
 
 			&:hover
 				color: $primary
 
-			@media screen and (max-width: 640px)
-				text-align: center
+			@media screen and (max-width: 320px)
+				@include transitions(0s, 0s)
+				font-size: 1.5rem
 
 	.menu-items.expand
-		margin-top: 100px
+		// margin-top: 10px
 		
 		a
-			padding-bottom: 25px
+			padding-bottom: 35px
 			color: $secondary
+			@media screen and (max-width: 320px)
+				padding-bottom: 20px
 
 			&:hover
 				@include transition(color, 0.1s, 0s)

@@ -1,13 +1,16 @@
 // NAV MENU
 nav
+	-webkit-transition: transform 0.2s ease 0s
+	transition: transform 0.2s ease 0s
 	width: 100%
 	z-index: 11
 	position: fixed
 	padding: 20px 0
 	background-color: $transp
-	@include transition(background-color, 0.2s, 0s)
-	// @include transition(padding, 0.2s, 0s)
-	// @include transition(background-color, 0.5s, 0s)
+	transform: translateY(0)
+	@media screen and (max-width: 768)
+		-webkit-transition: transform 0.1s ease 0s
+		transition: transform 0.1s ease 0s
 
 	#index
 		float: left
@@ -15,6 +18,10 @@ nav
 .nav-scrollup
 	background-color: lighten($black, 10%)
 	@extend %boxShadow
+
+.nav-hidden
+	transform: translateY(-80px)
+
 
 .menu,
 .menu-top
@@ -32,12 +39,21 @@ nav
 
 .menu
 	@media screen and (max-width: 768px)
+		transition: opacity 0.7s ease 1s
 		display: block
+		opacity: 0
+
+		&.active
+			opacity: 1
 
 .menu-top
 	margin-right: 30px
 	font-size: 15px
 	margin-top: 5px
+
+	&:hover,
+	&:active
+		color: #fff
 
 .menues
 	a
@@ -61,6 +77,6 @@ nav
 		color: $primary
 		@include transition(margin, 0.4s, 0s)
 
-	.top.scrollup
-		margin-left: 20px
+		&.scrollup
+			margin-left: 20px
 

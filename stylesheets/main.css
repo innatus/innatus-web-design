@@ -158,11 +158,11 @@ footer, .push {
 
 .background.b-gral,
 .background.b-home {
-  background: #424854 url(../img/pattern.gif) fixed repeat; }
+  background: #424854 url(../img/pattern.png) fixed repeat; }
   @media screen and (max-width: 768) {
     .background.b-gral,
     .background.b-home {
-      background: #424854 url(../img/pattern.gif) scroll repeat; } }
+      background: #424854 url(../img/pattern.png) scroll repeat; } }
 
 .modal-dialog {
   display: none;
@@ -349,7 +349,17 @@ a, a:hover, a:focus, a:visited {
   -o-transition: all 0.4s ease 0s; }
 
 .slogan {
+  transition: all 0.9s ease 0s;
   padding-top: 120px; }
+  .slogan.main {
+    opacity: 0;
+    transform: translateX(90px); }
+    @media screen and (max-width: 640px) {
+      .slogan.main {
+        transform: translateX(30px); } }
+    .slogan.main.active {
+      opacity: 1;
+      transform: translateX(0); }
   @media screen and (max-width: 768px) {
     .slogan {
       padding-top: 80px; } }
@@ -364,10 +374,20 @@ a, a:hover, a:focus, a:visited {
       color: #ff593d; }
 
 .header-links {
+  transition: all 1s ease 0.1s;
   margin-top: 50px;
   display: block;
   font-size: 20px;
   color: rgba(255, 255, 255, 0.5); }
+  .header-links.main {
+    opacity: 0;
+    transform: translateX(100px); }
+    @media screen and (max-width: 640px) {
+      .header-links.main {
+        transform: translateX(30px); } }
+    .header-links.main.active {
+      opacity: 1;
+      transform: translateX(0); }
   .header-links a {
     margin-top: 20px;
     color: rgba(255, 255, 255, 0.5);
@@ -397,21 +417,26 @@ a, a:hover, a:focus, a:visited {
         font-size: 38px; } }
 
 nav {
+  -webkit-transition: transform 0.2s ease 0s;
+  transition: transform 0.2s ease 0s;
   width: 100%;
   z-index: 11;
   position: fixed;
   padding: 20px 0;
   background-color: transparent;
-  transition: background-color 0.2s ease 0s;
-  -webkit-transition: background-color 0.2s ease 0s;
-  -moz-transition: background-color 0.2s ease 0s;
-  -ms-transition: background-color 0.2s ease 0s;
-  -o-transition: background-color 0.2s ease 0s; }
+  transform: translateY(0); }
+  @media screen and (max-width: 768) {
+    nav {
+      -webkit-transition: transform 0.1s ease 0s;
+      transition: transform 0.1s ease 0s; } }
   nav #index {
     float: left; }
 
 .nav-scrollup {
   background-color: #1a1a1a; }
+
+.nav-hidden {
+  transform: translateY(-80px); }
 
 .menu,
 .menu-top {
@@ -433,12 +458,18 @@ nav {
 
 @media screen and (max-width: 768px) {
   .menu {
-    display: block; } }
+    transition: opacity 0.7s ease 1s;
+    display: block;
+    opacity: 0; }
+    .menu.active {
+      opacity: 1; } }
 
 .menu-top {
   margin-right: 30px;
   font-size: 15px;
   margin-top: 5px; }
+  .menu-top:hover, .menu-top:active {
+    color: #fff; }
 
 .menues a {
   float: right;
@@ -466,8 +497,8 @@ nav {
   -moz-transition: margin 0.4s ease 0s;
   -ms-transition: margin 0.4s ease 0s;
   -o-transition: margin 0.4s ease 0s; }
-.menues .top.scrollup {
-  margin-left: 20px; }
+  .menues .top.scrollup {
+    margin-left: 20px; }
 
 .select-course-type a {
   display: block;
@@ -689,6 +720,8 @@ nav {
     .mylocation.locationcourse iframe {
       height: 350px; }
   .mylocation iframe {
+    pointer-events: none;
+    cursor: help;
     display: block;
     width: 80%;
     margin-right: auto;
@@ -799,7 +832,7 @@ footer {
     color: #ff593d;
     margin-top: 20px; }
   .expanded-menu .menu-items {
-    margin-top: 200px;
+    margin-top: 40px;
     padding: 5px 50px;
     transition: all 0.2s ease 0.1s;
     -webkit-transition: all 0.2s ease 0.1s;
@@ -808,10 +841,10 @@ footer {
     -o-transition: all 0.2s ease 0.1s; }
     .expanded-menu .menu-items a {
       display: block;
-      padding-bottom: 70px;
-      font-size: 40px;
+      padding-bottom: 60px;
+      font-size: 2rem;
       color: transparent;
-      text-align: center;
+      text-align: left;
       font-family: "PT Sans Narrow", sans-serif;
       transition: all 0.4s ease 0.2s;
       -webkit-transition: all 0.4s ease 0.2s;
@@ -820,21 +853,27 @@ footer {
       -o-transition: all 0.4s ease 0.2s; }
       .expanded-menu .menu-items a:hover {
         color: #ff593d; }
-      @media screen and (max-width: 640px) {
+      @media screen and (max-width: 320px) {
         .expanded-menu .menu-items a {
-          text-align: center; } }
-  .expanded-menu .menu-items.expand {
-    margin-top: 100px; }
-    .expanded-menu .menu-items.expand a {
-      padding-bottom: 25px;
-      color: #424854; }
-      .expanded-menu .menu-items.expand a:hover {
-        transition: color 0.1s ease 0s;
-        -webkit-transition: color 0.1s ease 0s;
-        -moz-transition: color 0.1s ease 0s;
-        -ms-transition: color 0.1s ease 0s;
-        -o-transition: color 0.1s ease 0s;
-        color: #ff593d; }
+          transition: all 0s ease 0s;
+          -webkit-transition: all 0s ease 0s;
+          -moz-transition: all 0s ease 0s;
+          -ms-transition: all 0s ease 0s;
+          -o-transition: all 0s ease 0s;
+          font-size: 1.5rem; } }
+  .expanded-menu .menu-items.expand a {
+    padding-bottom: 35px;
+    color: #424854; }
+    @media screen and (max-width: 320px) {
+      .expanded-menu .menu-items.expand a {
+        padding-bottom: 20px; } }
+    .expanded-menu .menu-items.expand a:hover {
+      transition: color 0.1s ease 0s;
+      -webkit-transition: color 0.1s ease 0s;
+      -moz-transition: color 0.1s ease 0s;
+      -ms-transition: color 0.1s ease 0s;
+      -o-transition: color 0.1s ease 0s;
+      color: #ff593d; }
 
 .velo-cursos {
   position: absolute;
@@ -1009,7 +1048,10 @@ footer {
 .tools {
   padding-top: 100px;
   padding-bottom: 100px;
-  background: #424854 url(../img/pattern.gif) fixed repeat; }
+  background: #424854 url(../img/pattern.png) fixed repeat; }
+  @media screen and (max-width: 768px) {
+    .tools {
+      background: #424854 url(../img/pattern.png) fixed repeat; } }
   @media screen and (max-width: 640px) {
     .tools {
       padding-top: 50px;
