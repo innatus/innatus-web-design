@@ -48,11 +48,15 @@ $(document).ready(function(){
 		$('.menu-top').hide();
 	}
 
+	// ANIMACION DE HEADERS
+
 	// Animacion de texto de header
 	$('.slogan, .header-links, .menu').addClass('active');
-	// $('.slogan, .header-links').setTimeout(function() {
-	// 	$(this).addClass('active');
-	// }, 400);
+	
+	// Animacion de fondos
+	if ( $(window).width() > 768 ) {
+		$('.background.b-csv, .background.b-csp, .background.b-dwi, .background.b-dwa, .background.b-mra, .background.b-at1, .background.b-dtp').addClass('active');
+	}
 
 	// Detalles del docente solo cambio de texto
 	$('.teacher h1').on('click', function(){

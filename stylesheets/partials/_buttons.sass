@@ -13,10 +13,17 @@
 
 	.acronym
 		padding: 8px 18px
-		background-color: $primary
+		background-color: $transp
+		border: 2px solid $white
 		margin-right: 15px
-		@include borderRadius(16px)
+		@include borderRadius(5px)
 		font-family: $font-primary
+		color: #fff
+
+		&.filled
+			border: 2px solid $primary
+			background-color: $primary
+			color: #fff
 
 	.course-title
 		margin-top: 8px
@@ -41,12 +48,13 @@
 .btn-secondary
 	position: relative
 	z-index: 3
-	padding: 8px 18px
+	padding: 15px 18px
 	float: left
-	background-color: $transp
+	background-color: $primary
+	// background-color: $transp
 	@extend %borderBox
-	@include borderRadius(16px)
-	border: 2px solid $white
+	@include borderRadius(5rem)
+	// border: 2px solid $white
 	font-size: 20px
 	color: $white
 	text-transform: uppercase
@@ -54,36 +62,48 @@
 	@include transitions(0.2s, 0s)
 
 	&:hover
-		background-color: transparentize($white, 0.9)
+		background-color: transparentize($white, 0.7)
+		// background-color: darken($primary, 25%)
+		box-shadow: 0 3px 3px transparentize($black, 0.5)
 
-.btn-secondary.centered
-	margin-top: 40px
-	float: none
-	display: block
-	max-width: 190px
-	margin-right: auto
-	margin-left: auto
-	text-align: center
+	&.btn-modal
+		background-color: #fff
+		border: 1px solid lightgray
+		box-shadow: none
 
-.btn-secondary.centered.submit
-	border: none
-	background-color: $primary
-	cursor: pointer
+		&:hover
+			background-color: lightgray
 
-	&:hover
-		background-color: darken($primary, 5%)
+	&.btn-hide
+		opacity: 0
+
+	&.centered
+		margin-top: 40px
+		float: none
+		display: block
+		max-width: 190px
+		margin-right: auto
+		margin-left: auto
+		text-align: center
+
+		&.cancel
+			padding: 5px 5px
+			font-size: 18px
+			margin-bottom: 20px
+			border-color: none
+			color: $secondary
+			cursor: pointer
+
+		&.submit
+			border: none
+			background-color: $primary
+			cursor: pointer
+
+			&:hover
+				background-color: darken($primary, 5%)
 
 .modal-dialog
 	.btn-secondary.centered.submit
 		margin-bottom: 10px
 
-.btn-secondary.centered.cancel
-	padding: 5px 5px
-	font-size: 18px
-	margin-bottom: 20px
-	border-color: none
-	color: $secondary
-	cursor: pointer
 
-.btn-secondary.btn-hide
-	opacity: 0
