@@ -674,7 +674,7 @@ nav {
         text-align: center; } }
 
 .meetus {
-  background-color: #424854;
+  background-color: #1a1a1a;
   padding-top: 50px;
   padding-bottom: 50px; }
   .meetus img {
@@ -710,7 +710,7 @@ nav {
   -moz-box-sizing: border-box;
   -ms-box-sizing: border-box;
   box-sizing: border-box;
-  background-color: #424854;
+  background-color: #1a1a1a;
   padding: 40px; }
   @media screen and (max-width: 768px) {
     .mylocation {
@@ -931,7 +931,8 @@ footer {
     margin-top: 5px; }
 
 .modulo {
-  background-color: #ff593d; }
+  background-color: #ff593d;
+  line-height: 35px; }
   .modulo p {
     padding-top: 100px;
     padding-bottom: 100px;
