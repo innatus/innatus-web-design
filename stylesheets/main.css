@@ -682,7 +682,7 @@ nav {
         text-align: center; } }
 
 .meetus {
-  background-color: #1a1a1a;
+  background-color: #424854;
   padding-top: 50px;
   padding-bottom: 50px; }
   .meetus img {
@@ -718,7 +718,7 @@ nav {
   -moz-box-sizing: border-box;
   -ms-box-sizing: border-box;
   box-sizing: border-box;
-  background-color: #1a1a1a;
+  background-color: #424854;
   padding: 40px; }
   @media screen and (max-width: 768px) {
     .mylocation {
@@ -939,8 +939,7 @@ footer {
     margin-top: 5px; }
 
 .modulo {
-  background-color: #ff593d;
-  line-height: 35px; }
+  background-color: #ff593d; }
   .modulo p {
     padding-top: 100px;
     padding-bottom: 100px;
@@ -1238,7 +1237,7 @@ footer {
       display: block;
       margin-right: auto;
       margin-left: auto;
-      margin-top: 50px;
+      margin-top: 10px;
       width: 300px; }
       @media screen and (max-width: 480px) {
         .certificate .graduate > div {
