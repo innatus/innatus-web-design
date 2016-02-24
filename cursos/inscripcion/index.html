@@ -64,6 +64,22 @@
 	<link href='http://fonts.googleapis.com/css?family=PT+Sans|PT+Sans+Narrow' rel='stylesheet' type='text/css'>
 	<script type="text/javascript" src="../../js/modernizr.js"></script>
 	<script src='https://www.google.com/recaptcha/api.js?hl=es'></script>
+	<!-- Facebook Pixel Code -->
+	<script>
+		!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+		n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+		n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+		t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+		document,'script','//connect.facebook.net/en_US/fbevents.js');
+
+		fbq('init', '1733136163589644');
+		fbq('track', "PageView");
+		fbq('track', 'CompleteRegistration');
+	</script>
+	<noscript>
+		<img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1733136163589644&ev=PageView&noscript=1"/>
+	</noscript>
+	<!-- End Facebook Pixel Code -->
 </head>
 <body>
 	<form id="inscription" action="inscription.php" method="post">
@@ -119,37 +135,37 @@
 					<h2>¿A cuál curso te vas a inscribir?</h2>
 					
 					<div class="pick-course b-csv cf" id="csv">
-						<a href="#selected" class="full-title cf"><span class="acronym">CSV</span><span class="course-title">Croquizado y Sketching Vehicular</span></a>
+						<a href="#selected" class="full-title cf"><span class="acronym filled">CSV</span><span class="course-title">Croquizado y Sketching Vehicular</span></a>
 						<i class="fa fa-check"></i>
 						<div class="velo"></div>
 					</div>
 
 					<div class="pick-course b-csp cf" id="csp">
-						<a href="#selected" class="full-title cf"><span class="acronym">CSP</span><span class="course-title">Croquizado y Sketching de Productos</span></a>
+						<a href="#selected" class="full-title cf"><span class="acronym filled">CSP</span><span class="course-title">Croquizado y Sketching de Productos</span></a>
 						<i class="fa fa-check"></i>
 						<div class="velo"></div>
 					</div>
 
 					<div class="pick-course b-dtp cf" id="dtp">
-						<a href="#selected" class="full-title cf"><span class="acronym">DTP</span><span class="course-title">Documentación Técnica de Productos</span></a>
+						<a href="#selected" class="full-title cf"><span class="acronym filled">DTP</span><span class="course-title">Documentación Técnica de Productos</span></a>
 						<i class="fa fa-check"></i>
 						<div class="velo"></div>
 					</div>
 
 					<div class="pick-course b-mra cf" id="mra">
-						<a href="#selected" class="full-title cf"><span class="acronym">MRA</span><span class="course-title">Modelado, Render y Animación</span></a>
+						<a href="#selected" class="full-title cf"><span class="acronym filled">MRA</span><span class="course-title">Modelado, Render y Animación</span></a>
 						<i class="fa fa-check"></i>
 						<div class="velo"></div>
 					</div>
 
 					<div class="pick-course b-dwi cf" id="dwi">
-						<a href="#selected" class="full-title cf"><span class="acronym">DWI</span><span class="course-title">Desarrollo Web Introductorio</span></a>
+						<a href="#selected" class="full-title cf"><span class="acronym filled">DWI</span><span class="course-title">Desarrollo Web Introductorio</span></a>
 						<i class="fa fa-check"></i>
 						<div class="velo"></div>
 					</div>
 
 					<div class="pick-course b-dwa cf" id="dwa">
-						<a href="#selected" class="full-title cf"><span class="acronym">DWA</span><span class="course-title">Desarrollo Web Avanzado</span></a>
+						<a href="#selected" class="full-title cf"><span class="acronym filled">DWA</span><span class="course-title">Desarrollo Web Avanzado</span></a>
 						<i class="fa fa-check"></i>
 						<div class="velo"></div>
 					</div>
@@ -374,7 +390,7 @@
 			<div class="cf">
 				<h1></h1>
 				<p><span></span></p>
-				<a href="#" class="btn-secondary centered cancel esc">Volver</i></a>
+				<a href="#" class="btn-secondary btn-modal centered cancel esc">Volver</i></a>
 			</div>
 		</div>
 
