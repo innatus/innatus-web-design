@@ -1,5 +1,5 @@
 // COURSE
-	
+
 // el modulo breve descripcion
 .modulo
 	background-color: $primary
@@ -40,7 +40,7 @@
 	img
 		width: 25%
 		float: left
-	
+
 		@media screen and (max-width: 768px)
 			width: 50%
 
@@ -76,7 +76,7 @@
 		&:nth-child(odd) .description-pic,
 		&:nth-child(even) .description-txt
 			float: right
-	
+
 	.photo
 		@include borderRadius(3px)
 		width: 100%
@@ -112,7 +112,7 @@
 			color: lighten($black, 20%)
 
 			@media screen and (max-width: 1024px)
-				font-size: 18px	
+				font-size: 18px
 			@media screen and (max-width: 768px)
 				font-size: 20px
 			@media screen and (max-width: 640px)
@@ -210,7 +210,7 @@
 	margin-right: auto
 	margin-left: auto
 	border-radius: 5px
-	
+
 	@extend %borderBox
 	padding: 30px
 	background-color: $info
@@ -235,7 +235,7 @@
 
 		@media screen and (max-width: 640px)
 			font-size: 16px
-	
+
 // certificado
 .certificate
 	position: relative
@@ -335,7 +335,7 @@
 
 		@media screen and (max-width: 640px)
 			font-size: 14px
-	
+
 	h1
 		padding-top: 30px
 		padding-bottom: 30px
@@ -348,7 +348,7 @@
 		cursor: pointer
 
 		@media screen and (max-width: 768px)
-			font-size: 40px	
+			font-size: 40px
 
 		@media screen and (max-width: 640px)
 			font-size: 25px
@@ -395,7 +395,7 @@
 	background-color: lighten($black, 10%)
 	padding-top: 60px
 	padding-bottom: 30px
-	
+
 	h1
 		padding-top: 30px
 		padding-bottom: 20px
@@ -424,7 +424,18 @@
 
 	.course-date
 		color: $primary
-		padding-top: 10px
+		padding-top: 30px
+
+		span
+			display: block
+			color: transparentize(#fff, 0.8)
+
+		a
+			color: $info
+			text-decoration: underline
+			transition: color 0.2s ease 0s
+			&:hover
+				color: #fff
 
 	.more-benefits
 		font-size: 16px
@@ -468,6 +479,6 @@
 
 		@media screen and (max-width: 640px)
 			font-size: 12px
-		
+
 		i
 			margin-right: 10px
