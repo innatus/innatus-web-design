@@ -19,7 +19,7 @@ function docenteExpand(){
 
 $(document).keyup(function(e) {
 	// Tecla ESC
-	if (e.keyCode == 27) { 
+	if (e.keyCode == 27) {
 
 		// Oculta los modal
 		$('.modal-dialog').fadeOut(150);
@@ -29,7 +29,7 @@ $(document).keyup(function(e) {
 		$('.menu-items').removeClass('expand');
 		// $('body, html').css('overflow', 'visible')
 		if ( $(window).scrollTop() > 5) {
-			$('nav').show().addClass('nav-scrollup')
+			$('nav').show().addClass('nav-scrollup');
 		}
 	}
 });
@@ -52,7 +52,7 @@ $(document).ready(function(){
 
 	// Animacion de texto de header
 	$('.slogan, .header-links, .menu').addClass('active');
-	
+
 	// Animacion de fondos
 	if ( $(window).width() > 768 ) {
 		$('.background.b-csv, .background.b-csp, .background.b-dwi, .background.b-dwa, .background.b-mra, .background.b-at1, .background.b-dtp').addClass('active');
@@ -127,7 +127,7 @@ $(document).ready(function(){
 		$('.menu-items').removeClass('expand');
 		// $('body, html').css('overflow', 'visible')
 		if ( $(window).scrollTop() > 5) {
-			$('nav').show().addClass('nav-scrollup')
+			$('nav').show().addClass('nav-scrollup');
 		}
 	});
 
@@ -136,7 +136,7 @@ $(document).ready(function(){
 		e.preventDefault();
 		$('.modal-dialog').fadeOut(150);
 	});
-	
+
 
 	//INSCRIPCION
 
@@ -167,12 +167,12 @@ $(document).ready(function(){
 
 	// Activa los eventos de puntero cuando clickeo el contenedor del mapa
 	$('.mylocation').click(function () {
-	    $('.mylocation iframe').css("pointer-events", "auto");
+			$('.mylocation iframe').css("pointer-events", "auto");
 	});
 
 });
 
-	
+
 $(window).scroll(function(){
 
 	var st = $(this).scrollTop();
@@ -184,7 +184,7 @@ $(window).scroll(function(){
 		$('nav').removeClass('nav-scrollup nav-hidden');
 
 	} else {
-		
+
 		if (st > lastScrollTop){
 			// scroll down
 			$('nav').addClass('nav-hidden').removeClass('nav-scrollup');
@@ -212,8 +212,8 @@ $(window).scroll(function(){
 				}
 			}
 
-		} 
-	};
+		}
+	}
 
 	lastScrollTop = st;
 
