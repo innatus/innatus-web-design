@@ -16,11 +16,6 @@ HTML, SASS, JS, PHP para el mquetado y desarrollo e [Inkscape](http://inkscape.o
 
 - - -
 ####Conocé el proyecto en:
-[Facebook, ](https://www.facebook.com/innatus.cursos)
-[Twitter, ](https://www.twitter.com/innatus_)
+[Facebook](https://www.facebook.com/innatus.cursos)
+[Twitter](https://www.twitter.com/innatus_)
 [Google+](https://plus.google.com/+InnatusAr)
-
-
-
-
-

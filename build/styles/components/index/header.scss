@@ -1,0 +1,14 @@
+.header-section {
+  overflow: hidden;
+  background-image: url("/public/images/views/home/header-background.png");
+  background-attachment: fixed;
+  background-repeat: repeat;
+  padding: 10rem 0;
+}
+
+.header-section-title,
+.header-section-subtitle {
+  font-size: 4.2rem;
+  line-height: 110%;
+  margin: 0;
+}

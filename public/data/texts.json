@@ -1,0 +1,142 @@
+{
+  "author": "Innatus Capacitación",
+  "title": "Innatus Capacitación (Cursos certificados)",
+  "desciption": "Cursos manuales e informáticos. Sketching de productos y vehículos, desarrollo web, modelado 3d, render y animación 3D",
+  "keywords": "innatus,inspt,leon xiii,don bosco,salesiano,cursos,desarrollo web desde cero,desarrollo front end,diseño de producto,automotriz,vehiculos,sketching,croquiz,croquizado,dibujo,perspectiva,3d,render 3d,animación,blender,open source,software libre",
+  "siteUrl": "http://www.innatus.com.ar/index.html",
+  "metaImg": "http://innatus.com.ar/img/metaimg.jpg",
+  "twitterAccount": "@innatus_cursos",
+  "aboutUs": "Somos un proyecto joven, que surge de la sinérgia de un equipo de profesionales e instituciones. Somos apasionados por lo que hacemos y queremos compartirlo.",
+  "courses": [
+    {
+      "title": "Croquizado y Sketching Vehicular",
+      "duration": "8 clases (24hs / 3hs semanales) Presencial",
+      "description": "Este curso te permite obtener las herramientas necesarias para el renderizado de vehículos de diferentes segmentos y utilidades. También podrás explorar diversos métodos de representación gráfica para plasmar ideas de forma efectiva.",
+      "code": "csv",
+      "category": "industrial_design",
+      "type": { "name": "paint-brush", "color": "blue" },
+      "isNew": false,
+      "isAvailable": false
+    },
+    {
+      "title": "Croquizado y Sketching de Productos",
+      "duration": "8 clases (24hs / 3hs semanales) Presencial",
+      "description": "Este curso te permite desarrollar y conocer las técnicas y los sistemas representación de dibujo a mano alzada. También te permitirá adquirir las destrezas mínimas en el uso de herramientas de renderizado.",
+      "code": "csp",
+      "category": "industrial_design",
+      "type": { "name": "paint-brush", "color": "blue" },
+      "isNew": false,
+      "isAvailable": false
+    },
+    {
+      "title": "Taller de Expresión Arquitectónica",
+      "duration": "8 clases (24hs / 3hs semanales) Presencial",
+      "description": "Este curso te permitirá comenzar a explorar tu capacidad expresiva, ayudandote a encontrar una impronta personal rápida y sencilla que te diferencie de otros sistemas digitales y facilitandote además una rápida respuesta tanto en una corrección como en las tareas de análisis de una idea.",
+      "code": "tea",
+      "category": "architecture",
+      "type": { "name": "paint-brush", "color": "blue" },
+      "isNew": false,
+      "isAvailable": false
+    },
+    {
+      "title": "Documentación Técnica de Producto",
+      "duration": "8 clases (24hs / 3hs semanales) Presencial",
+      "description": "Este curso te permitirá modelar piezas en 3D, crear ensambles y generar los planos para documentar técnicamente un producto. El alumno se introducirá en los programas paramétricos con el concepto de diseñar un proceso y no un resultado.",
+      "code": "dtp",
+      "category": "industrial_design",
+      "type": { "name": "cubes", "color": "green" },
+      "isNew": false,
+      "isAvailable": false
+    },
+    {
+      "title": "Introducción al Renderizado Fotorrealista",
+      "duration": "8 clases (24hs / 3hs semanales) Presencial",
+      "description": "Con este curso vas a aprender a realizar visualizaciones fotográficas profesionales, y en el camino aprenderás un gran software 3D.",
+      "code": "irf",
+      "category": "industrial_design architecture",
+      "type": { "name": "cubes", "color": "green" },
+      "isNew": false,
+      "isAvailable": false
+    },
+    {
+      "title": "Modelado Render y Animación",
+      "duration": "10 clases (30hs / 3hs semanales) Presencial",
+      "description": "Este curso te permite comunicar tus ideas y diseños utilizando diferentes software para poder representarlas tridimensionalmente, asignarle apariencias y ver la forma en que interactuan los objetos en el espacio 3D.",
+      "code": "mra",
+      "category": "industrial_design architecture",
+      "type": { "name": "cubes", "color": "green" },
+      "isNew": false,
+      "isAvailable": false
+    },
+    {
+      "title": "Modelado 3D para VideoJuegos",
+      "duration": "8 clases (24hs / 3hs semanales) Presencial",
+      "description": "Con este curso crearás modelos 3D listos para ser utilizados en videojuegos y realidad virtual. Conocerás diversas técnicas de modelado 3D y pintado de texturas. Además podrás implementar tus creaciones en un motor de videojuegos.",
+      "code": "mvj",
+      "category": "industrial_design",
+      "type": { "name": "cubes", "color": "green" },
+      "isNew": false,
+      "isAvailable": false
+    },
+    {
+      "title": "Modelado y Render Vehicular",
+      "duration": "8 clases (24hs / 3hs semanales) Presencial",
+      "description": "Este nuevo curso es una expansión de CSV dirigido a los alumnos que quieran materializar sus diseños vehiculares en un ambiente 3D. Desarrollarás tus conocimientos ya adquiridos para generar productos de gran valor en el sector automotor.",
+      "code": "mrv",
+      "category": "industrial_design",
+      "type": { "name": "cubes", "color": "green" },
+      "isNew": false,
+      "isAvailable": false
+    },
+    {
+      "title": "Visualización Arquitectónica Digital",
+      "duration": "10 clases (30hs / 3hs semanales) Presencial",
+      "description": "Con este curso vas a aprender a realizar visualizaciones arquitectónicas profesionales, y en el camino aprenderás un gran software 3D.",
+      "code": "vad",
+      "category": "architecture",
+      "type": { "name": "cubes", "color": "green" },
+      "isNew": false,
+      "isAvailable": false
+    },
+    {
+      "title": "Desarrollo Web Front End",
+      "duration": "10 clases (30hs / 3hs semanales) Presencial",
+      "description": "Con este curso vas a aprender a realizar visualizaciones arquitectónicas profesionales, y en el camino aprenderás un gran software 3D.",
+      "code": "dwf",
+      "category": "programming",
+      "type": { "name": "code", "color": "purple" },
+      "isNew": true,
+      "isAvailable": false
+    }
+  ],
+  "teachers": [
+    {
+      "pictureUrl": "/public/images/teachers/teacher3.jpg",
+      "name": "Lorem ipsum dolor",
+      "role": "Lorem ipsum",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      "socials": [{ "type": "twitter", "link": "" }, { "type": "linkedin", "link": "" }]
+    },
+    {
+      "pictureUrl": "/public/images/teachers/teacher2.jpg",
+      "name": "Lorem ipsum dolor",
+      "role": "Lorem ipsum",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      "socials": [{ "type": "twitter", "link": "" }, { "type": "facebook", "link": "" }]
+    },
+    {
+      "pictureUrl": "/public/images/teachers/teacher3.jpg",
+      "name": "Lorem ipsum dolor",
+      "role": "Lorem ipsum",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      "socials": [{ "type": "twitter", "link": "" }, { "type": "linkedin", "link": "" }]
+    },
+    {
+      "pictureUrl": "/public/images/teachers/teacher2.jpg",
+      "name": "Lorem ipsum dolor",
+      "role": "Lorem ipsum",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      "socials": [{ "type": "twitter", "link": "" }, { "type": "facebook", "link": "" }]
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{% extends "./templates/main.html" %}
+
+{% block content %}
+<!-- Isotope -->
+<script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+	
+{% include "./components/navbar.html" %}
+
+{% include "./components/index/header.html" %}
+
+{% include "./components/teacher-section/teachers.html" %}
+
+{% include "./components/campaign-section/campaigns.html" %}
+
+{% include "./components/courses.html" %}
+
+{% include "./components/footer.html"%}
+
+
+
+{% endblock %}

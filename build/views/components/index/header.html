@@ -1,0 +1,31 @@
+<!-- Import Typed -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.8/typed.min.js"></script>
+
+<!-- custom className -->
+<div class="header-section">
+  <div class="container">
+    <!-- custom className -->
+    <h1 class="deep-orange-text header-section-title">Estudiá lo que te
+      <!-- custom id -->
+      <span id="header-section-animation"></span>
+    </h1>
+    <br />
+    <!-- custom className -->
+    <p class="grey-text text-lighten-5 header-section-subtitle">Motivá tu expresión</p>
+    <br />
+    <!-- custom className -->
+    <p class="grey-text text-lighten-5 header-section-subtitle">Sumate</p>
+  </div>
+</div>
+
+<!--Move script to scripts/components/index.js-->
+<script>
+  new Typed('#header-section-animation', {
+    typeSpeed: 50,
+    strings: [
+      'gusta',
+      'divierte',
+      'apasiona',
+    ],
+  });
+</script>

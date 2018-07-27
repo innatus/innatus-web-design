@@ -1,0 +1,136 @@
+.flex {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-direction: row;
+  flex-direction: row; }
+
+.h-align-left {
+  -ms-flex-pack: start;
+  justify-content: flex-start; }
+
+.h-align-center {
+  -ms-flex-pack: center;
+  justify-content: center; }
+
+.h-align-right {
+  -ms-flex-pack: end;
+  justify-content: flex-end; }
+
+.h-align-around {
+  -ms-flex-pack: distribute;
+  justify-content: space-around; }
+
+.h-align-between {
+  -ms-flex-pack: justify;
+  justify-content: space-between; }
+
+.v-align-top {
+  -ms-flex-align: start;
+  align-items: flex-start; }
+
+.v-align-center {
+  -ms-flex-align: center;
+  align-items: center; }
+
+.v-align-bottom {
+  -ms-flex-align: end;
+  align-items: flex-end; }
+
+.flex-col {
+  -ms-flex-direction: column;
+  flex-direction: column; }
+
+.text-uppercase {
+  text-transform: uppercase; }
+
+.section-padding {
+  padding: 60px 0; }
+
+.home-course {
+  position: relative;
+  border-top: 4px solid violet; }
+
+.home-course .container {
+  position: relative;
+  z-index: 2; }
+
+.home-course .background-black {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background: #000;
+  opacity: .6; }
+
+.home-course .background-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  z-index: 0; }
+
+.headers-filter {
+  padding-top: 40px; }
+
+.course-card-img {
+  height: 200px;
+  -o-object-fit: cover;
+  object-fit: cover; }
+
+.grid-item {
+  width: 33.33%;
+  padding: 0 10px; }
+
+.navbar-logo {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%); }
+
+.header-section {
+  overflow: hidden;
+  background-image: url(/public/images/views/home/header-background.png);
+  background-attachment: fixed;
+  background-repeat: repeat;
+  padding: 10rem 0; }
+
+.header-section-subtitle, .header-section-title {
+  font-size: 4.2rem;
+  line-height: 110%;
+  margin: 0; }
+
+.campaign-section {
+  background-image: url(/public/images/views/home/header-background.png);
+  background-attachment: fixed;
+  background-repeat: repeat; }
+
+.teacher-img-container {
+  width: 80%;
+  max-width: 150px;
+  position: relative;
+  margin: auto; }
+
+.teacher-img-container:after {
+  content: "";
+  display: block;
+  padding-bottom: 100%; }
+
+.teacher-profile {
+  position: absolute;
+  -o-object-fit: cover;
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0; }
+
+.teacher-social-icon {
+  padding: 0 10px; }
