@@ -104,20 +104,6 @@ gulp.task('delete_scripts', () => gulp.src(['./build/scripts/temp', './public/sc
 gulp.task('build_scripts', (callback) => sequence('babel')(callback));
 gulp.task('watch_scripts', () => gulp.watch('./build/scripts/**/*.js', ['build_scripts']));
 
-
-
-////////////////////////////////////////////////////////////////////////////////
-// Other tasks
-////////////////////////////////////////////////////////////////////////////////
-
-gulp.task('images', () => gulp.src('./build/images/**/*.*')
-  .pipe(plumber())
-  .pipe(gulp.dest('./public/images/')));
-
-gulp.task('data', () => gulp.src('./build/data/**/*.*')
-  .pipe(plumber())
-  .pipe(gulp.dest('./public/data/')));
-
 ////////////////////////////////////////////////////////////////////////////////
 // Watches task
 ////////////////////////////////////////////////////////////////////////////////
@@ -128,7 +114,10 @@ gulp.task('watch', sequence(['watch_scripts', 'watch_styles', 'watch_views']));
 // Reset task
 ////////////////////////////////////////////////////////////////////////////////
 
-gulp.task('reset_app', () => gulp.src(['./public', './*.html']).pipe(clean()));
+gulp.task('reset_app', () => gulp.src([
+  './public/styles',
+  './public/scripts',
+]).pipe(clean()));
 
 ////////////////////////////////////////////////////////////////////////////////
 // Compilers
@@ -137,7 +126,6 @@ gulp.task('reset_app', () => gulp.src(['./public', './*.html']).pipe(clean()));
 gulp.task('server', sequence('watch', 'start_server'));
 gulp.task('compile', sequence(
   'reset_app',
-  ['images', 'data'],
   'build_views',
   'build_styles',
   'build_scripts'

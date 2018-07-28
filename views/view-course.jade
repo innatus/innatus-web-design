@@ -1,0 +1,98 @@
+include ./includes/template.jade
+
+block body
+  style.
+    .course-header {
+      background-image: url("/images/courses/#{courseId}/#{coverImage}");
+      background-size: cover;
+      position: relative;
+      padding: 10rem 0;
+    }
+    .course-header-opacity {
+      background: black;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      opacity: 0.5;
+      z-index: 1;
+    }
+    .course-header-content {
+      position: relative;
+      z-index: 2;
+    }
+    .course-description-container {
+      padding: 5rem 0;
+    }
+    .course-description {
+      max-width: 900px;
+      margin: auto;
+    }
+    .course-thumbnail {
+      position: absolute;
+      object-fit: cover;
+      height: 100%;
+      width: 100%;
+      left: 0;
+      top: 0;
+    }
+    .course-img-container {
+      width: 25%;
+      position: relative;
+      margin: auto;
+      display: inline-block;
+    }
+
+    .course-img-container:after {
+      content: "";
+      display: block;
+      padding-bottom: 75%;
+    }
+
+  include ./includes/navbar
+
+  .section.course-header
+    .course-header-opacity
+    .course-header-content
+      .container
+        p.grey-text.text-lighten-5
+          b CURSO DE
+        h1.grey-text.text-lighten-5 #{title}
+        a.btn-large.waves-effect.grey.lighten-5.grey-text.text-darken-4 Información de la carrera
+        &nbsp;&nbsp;
+        a.btn-large.waves-effect.waves-light.deep-orange Inscribirse
+  
+  .course-description-container.section.grey.lighten-5
+    .container
+      p.flow-text.grey-text.text-darken-4.center.course-description
+        <i class="fas fa-quote-left grey-text"></i>
+        | #{description}
+        <i class="fas fa-quote-right grey-text"></i>
+
+  .z-depth-4
+    .flex
+      each thumbnail in thumbnails
+        .course-img-container
+          img.course-thumbnail(src="/images/courses/#{courseId}/#{thumbnail}", alt="")
+  
+    .section
+      .container
+        each section, index in sections
+          .row
+            if  index % 2 === 0
+              .col.s6
+                .flex.flex-col
+                  h3 #{section.title}
+                  p #{section.description}
+              .col.s6
+                img(src="/images/courses/#{courseId}/#{section.picture}", width="100%")
+            else
+              .col.s6
+                img(src="/images/courses/#{courseId}/#{section.picture}", width="100%")
+              .col.s6
+                .flex.flex-col
+                  h3 #{section.title}
+                  p #{section.description}
+  
+  include ./includes/footer

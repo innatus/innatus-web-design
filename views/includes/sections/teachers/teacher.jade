@@ -1,0 +1,38 @@
+style.
+  .teacher-img-container {
+    width: 80%;
+    max-width: 150px;
+    position: relative;
+    margin: auto;
+  }
+
+  .teacher-img-container:after {
+    content: "";
+    display: block;
+    padding-bottom: 100%;
+  }
+
+  .teacher-profile {
+    position: absolute;
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+  }
+
+  .teacher-social-icon {
+    padding: 0 10px;
+  }
+
+.col.s12.m6.l4.xl3
+  .teacher-img-container
+    img.circle.z-depth-3.teacher-profile(src="#{teacher.picture}", alt='')
+  h5.grey-text.text-darken-4.center
+    b #{teacher.name}
+  p.deep-orange-text.center.text-uppercase #{teacher.role}
+  p.grey-text.center #{teacher.description}
+  .flex
+    each social in teacher.socials
+      a.deep-orange-text(href=social.link)
+        i.fab.fa-lg.teacher-social-icon(class="fa-#{social.type}")

@@ -1,0 +1,79 @@
+style.
+  .headers-filter {
+    padding-top: 40px;
+  }
+
+  .course-card-img {
+    height: 200px;
+    object-fit: cover
+  }
+
+  .grid-item {
+    width: 33.33%;
+    padding: 0 10px;
+  }
+
+#courses.section-padding
+  .container
+    h2.center ¿Qué curso te gustaría hacer?
+    p.flow-text.center.grey-text Conviértete en un experto con prácticas reales
+    .row.headers-filter
+      .col.s4
+        .input-field.col.s12
+          select#filterBy
+            option(value='*', selected='') Todos los cursos
+            option(value='.industrial_design') Diseño Industrial
+            option(value='.graphic_design') Diseño Gráfico
+            option(value='.architecture') Arquitectura
+            option(value='.programming') Programación
+          label Filtrar por:
+      .col.s4
+        .input-field.col.s12
+          select#orderBy
+            option(value='quantityStudents', selected='') Popularidad
+            option(value='quantityHours') Drucación
+            option(value='courseName') Nombre
+          label Ordenar por:
+    .grid
+      each course in courses
+        include ./course.jade
+
+script.
+  // init Selects
+  const selects = document.querySelectorAll('select');
+  selects.forEach(select => M.FormSelect.init(select));
+  // init Isotope
+  const iso = new Isotope('.grid', {
+    itemSelector: '.grid-item',
+    layoutMode: 'fitRows',
+    getSortData: {
+      'quantityStudents': '.sort-quantityStudents',
+      'quantityHours': '.sort-quantityHours',
+      'courseName': '.sort-courseName',
+    }
+  });
+  // bind filter on select change
+  const filterByElement = document.getElementById('filterBy');
+  filterByElement.addEventListener('change', (event) => {
+    const { target } = event;
+    const instance = M.FormSelect.getInstance(target);
+    const values = instance.getSelectedValues();
+    if (values.length === 0) {
+      iso.arrange({ filter: ['*'] });
+    } else {
+      iso.arrange({ filter: values });
+    }
+  });
+  // bind order on select change
+  const orderByElement = document.getElementById('orderBy');
+  orderByElement.addEventListener('change', (event) => {
+    const { target } = event;
+    const instance = M.FormSelect.getInstance(target);
+    const values = instance.getSelectedValues();
+    console.log('values: ', values);
+    if (values.length === 0) {
+      iso.arrange({ sortBy: ['*'] });
+    } else {
+      iso.arrange({ sortBy: values });
+    }
+  });

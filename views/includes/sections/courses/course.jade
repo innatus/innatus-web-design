@@ -1,0 +1,22 @@
+.grid-item(class='#{course.category}')
+  .col.s4
+    .card.hoverable
+      .card-image
+        img.course-card-img(src='/images/courses/#{course.courseId}/#{course.coverImage}')
+      .card-content
+        span.card-title.sort-courseName #{course.title}
+        if course.description.length > 60
+          p.grey-text #{course.description.substr(1, 60) + '...'}
+        else
+          p.grey-text #{course.description}
+      .card-action
+        .chip
+          i.fas.fa-user-circle
+          span.sort-quantityStudents 1.800
+          |  alumnos
+        .chip
+          i.fas.fa-clock
+          span.sort-quantityHours 30
+          |  horas
+      .card-action
+        a.deep-orange-text(href='/cursos/#{course.courseId}') Ver curso
