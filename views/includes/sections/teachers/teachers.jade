@@ -1,0 +1,15 @@
+.section.grey.lighten-5
+  .container
+    h2.grey-text.text-darken-4.center Nuestros profesores
+    p.grey-text.center Estudia con profesores expertos de la industria.
+    br
+    br
+    .row
+      each teacher in teachers
+        include ./teacher.jade
+    br
+    br
+    .row
+      .col.s12.center
+        p.grey-text ¿Sos profesor?
+        a.waves-effect.btn-flat Trabaja con nosotros

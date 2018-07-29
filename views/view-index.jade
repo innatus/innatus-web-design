@@ -1,0 +1,51 @@
+include ./includes/template.jade
+
+block body
+  style.
+    .header-section {
+      overflow: hidden;
+      background-image: url("/images/views/home/header-background.png");
+      background-attachment: fixed;
+      background-repeat: repeat;
+      padding: 10rem 0;
+    }
+    .header-section-title,
+    .header-section-subtitle {
+      font-size: 4.2rem;
+      line-height: 110%;
+      margin: 0;
+    }
+
+  //- Isotope
+  script(src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js")
+  //- Import Typed
+  script(src='https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.8/typed.min.js')
+  
+  include ./includes/navbar
+
+  .header-section
+    .container
+      h1.deep-orange-text.header-section-title Estudiá lo que te 
+        span#header-section-animation
+      br
+      p.grey-text.text-lighten-5.header-section-subtitle Motivá tu expresión
+      br
+      p.grey-text.text-lighten-5.header-section-subtitle Sumate
+  
+  script.
+    new Typed('#header-section-animation', {
+      typeSpeed: 50,
+      strings: [
+        'gusta',
+        'divierte',
+        'apasiona',
+      ],
+    });
+
+  include ./includes/sections/teachers/teachers
+  
+  include ./includes/sections/campaigns/campaigns
+  
+  include ./includes/sections/courses/courses
+
+  include ./includes/footer

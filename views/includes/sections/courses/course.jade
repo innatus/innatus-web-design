@@ -1,0 +1,22 @@
+.grid-item.col.s12.m6.l4(class='#{course.category}')
+  .card.hoverable
+    .card-image
+      img.course-img(src='/images/courses/#{course.id}/#{course.coverCard}')
+      if course.isNew
+        span.course-badge.new.badge.red(data-badge-caption="Nuevo")
+      if course.isComing
+        span.course-badge.new.badge.blue(data-badge-caption="Proximamente")
+    .card-content
+      span.card-title.sort-courseName #{course.title}
+      p.grey-text #{course.shortDescription}
+      br
+      .chip
+        i.fas.fa-user-circle
+        span.sort-quantityStudents &nbsp;#{course.quantityStudents}
+        | &nbsp;alumnos
+      .chip
+        i.fas.fa-clock
+        span.sort-hoursForLesson &nbsp;#{course.hoursForLesson}
+        | &nbsp;horas
+    .card-action
+      a.deep-orange-text(href='/cursos/#{course.id}') Conocer programa
