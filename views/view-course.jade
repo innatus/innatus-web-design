@@ -73,7 +73,7 @@ block body
         h1.grey-text.text-lighten-5 #{courseData.title}
         a.btn-large.waves-effect.grey.lighten-5.grey-text.text-darken-4 Información de la carrera
         &nbsp;&nbsp;
-        a.btn-large.waves-effect.waves-light.deep-orange Inscribirse
+        a.btn-large.waves-effect.waves-light.deep-orange.modal-trigger(href='#modalSuscribe') Inscribirse
   .course-description-container.section.grey.lighten-5
     .container
       p.flow-text.grey-text.text-darken-4.center.course-description
@@ -110,8 +110,40 @@ block body
                   h3 #{section.title}
                   p #{section.description}
         
-  //- include ./includes/sections/campaigns/campaigns
+  include ./includes/sections/campaigns/campaigns
 
   //- include ./includes/sections/suscribe/suscribe
+  #suscribe.section
+    .container
+      h1 Suscribirse
+  
+  #modalSuscribe.modal
+    .modal-content
+      h4 ¿Estás interesado en #{courseData.title}?
+      p Ya estás un paso más cerca de formar parte de Innatus. ¡Dejanos tus datos y te contactamos para iniciar el proceso de inscripción!
+      
+      .input-field
+        input.validate(id="userCourse", type="hidden", value="#{courseData.id}")
+
+      .input-field
+        input.validate(id="userName", type="text")
+        label(for="userName") Nombre completo
+
+      .input-field
+        input.validate(id="userEmail", type="email")
+        label(for="userEmail") Correo electrónico
+
+      .input-field
+        input.validate(id="userPhone", type="tel")
+        label(for="userPhone") Teléfono
+
+    .modal-footer
+      a.modal-close.waves-effect.waves-green.btn-flat(href='#!') Agree
   
   include ./includes/footer
+
+  script.
+    document.addEventListener('DOMContentLoaded', () => {
+      const element = document.querySelector('#modalSuscribe');
+      M.Modal.init(element);
+    });
