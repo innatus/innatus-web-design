@@ -1,6 +1,6 @@
 module.exports = [
   {
-    pictureUrl: '/images/teachers/teacherA.jpg',
+    pictureUrl: 'teacherA.jpg',
     fullName: 'Lorem ipsum dolor',
     role: 'Lorem ipsum',
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
@@ -16,7 +16,7 @@ module.exports = [
     ]
   },
   {
-    pictureUrl: '/images/teachers/teacherB.jpg',
+    pictureUrl: 'teacherB.jpg',
     fullName: 'Lorem ipsum dolor',
     role: 'Lorem ipsum',
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
@@ -32,7 +32,7 @@ module.exports = [
     ]
   },
   {
-    pictureUrl: '/images/teachers/teacherA.jpg',
+    pictureUrl: 'teacherA.jpg',
     fullName: 'Lorem ipsum dolor',
     role: 'Lorem ipsum',
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
@@ -48,7 +48,7 @@ module.exports = [
     ]
   },
   {
-    pictureUrl: '/images/teachers/teacherB.jpg',
+    pictureUrl: 'teacherB.jpg',
     fullName: 'Lorem ipsum dolor',
     role: 'Lorem ipsum',
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',

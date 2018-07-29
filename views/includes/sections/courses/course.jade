@@ -1,22 +1,22 @@
-.grid-item(class='#{course.category}')
-  .col.s4
-    .card.hoverable
-      .card-image
-        img.course-card-img(src='/images/courses/#{course.courseId}/#{course.coverImage}')
-      .card-content
-        span.card-title.sort-courseName #{course.title}
-        if course.description.length > 60
-          p.grey-text #{course.description.substr(1, 60) + '...'}
-        else
-          p.grey-text #{course.description}
-      .card-action
-        .chip
-          i.fas.fa-user-circle
-          span.sort-quantityStudents 1.800
-          |  alumnos
-        .chip
-          i.fas.fa-clock
-          span.sort-quantityHours 30
-          |  horas
-      .card-action
-        a.deep-orange-text(href='/cursos/#{course.courseId}') Ver curso
+.grid-item.col.s12.m6.l4(class='#{course.category}')
+  .card.hoverable
+    .card-image
+      img.course-img(src='/images/courses/#{course.id}/#{course.coverCard}')
+      if course.isNew
+        span.course-badge.new.badge.red(data-badge-caption="Nuevo")
+      if course.isComing
+        span.course-badge.new.badge.blue(data-badge-caption="Proximamente")
+    .card-content
+      span.card-title.sort-courseName #{course.title}
+      p.grey-text #{course.shortDescription}
+      br
+      .chip
+        i.fas.fa-user-circle
+        span.sort-quantityStudents &nbsp;#{course.quantityStudents}
+        | &nbsp;alumnos
+      .chip
+        i.fas.fa-clock
+        span.sort-hoursForLesson &nbsp;#{course.hoursForLesson}
+        | &nbsp;horas
+    .card-action
+      a.deep-orange-text(href='/cursos/#{course.id}') Conocer programa

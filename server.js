@@ -1,7 +1,7 @@
 const express = require('express');
 const path = require('path');
 const data = require('./public/data/texts.json');
-const { teachers } = require('./public/data/site');
+const { appData, courses, teachers } = require('./public/data/site');
 const app = express();
 
 app.set('view engine', 'jade');
@@ -10,14 +10,18 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.get('/', (req, res) => {
   res.render('view-index', {
+    appData,
+    courses,
+    teachers,
     data,
-    teachers
   });
 });
 
-app.get('/cursos/:course', function (req, res) {
-  const courseId = req.params.course;
-  res.render('view-course', data.courses.find(course => course.courseId === courseId))
+app.get('/cursos/:id', (req, res) => {
+  const id = req.params.id;
+  const courseData = courses.find(course => course.id === id);
+  if (!courseData) res.redirect('/');
+  res.render('view-course', { appData, courseData });
 });
 
 app.all('*', (req, res) => {

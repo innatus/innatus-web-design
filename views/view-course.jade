@@ -3,7 +3,7 @@ include ./includes/template.jade
 block body
   style.
     .course-header {
-      background-image: url("/images/courses/#{courseId}/#{coverImage}");
+      background-image: url("/images/courses/#{courseData.id}/#{courseData.coverCourse}");
       background-size: cover;
       position: relative;
       padding: 10rem 0;
@@ -43,11 +43,24 @@ block body
       margin: auto;
       display: inline-block;
     }
-
     .course-img-container:after {
       content: "";
       display: block;
-      padding-bottom: 75%;
+      padding-bottom: 60%;
+    }
+    .course-image-section {
+      width: 100%;
+      position: relative;
+      margin: auto;
+      display: inline-block;
+    }
+    .course-image-section:after {
+      content: "";
+      display: block;
+      padding-bottom: 50%;
+    }
+    .course-section-container {
+      padding: 5rem 0;
     }
 
   include ./includes/navbar
@@ -56,43 +69,49 @@ block body
     .course-header-opacity
     .course-header-content
       .container
-        p.grey-text.text-lighten-5
-          b CURSO DE
-        h1.grey-text.text-lighten-5 #{title}
+        p.grey-text.text-lighten-5 CURSO DE
+        h1.grey-text.text-lighten-5 #{courseData.title}
         a.btn-large.waves-effect.grey.lighten-5.grey-text.text-darken-4 Información de la carrera
         &nbsp;&nbsp;
         a.btn-large.waves-effect.waves-light.deep-orange Inscribirse
-  
   .course-description-container.section.grey.lighten-5
     .container
       p.flow-text.grey-text.text-darken-4.center.course-description
-        <i class="fas fa-quote-left grey-text"></i>
-        | #{description}
-        <i class="fas fa-quote-right grey-text"></i>
-
+        <i class="fas fa-quote-left deep-orange-text"></i>
+        | #{courseData.description}
+        <i class="fas fa-quote-right deep-orange-text"></i>
   .z-depth-4
     .flex
-      each thumbnail in thumbnails
+      each thumbnail in courseData.thumbnails
         .course-img-container
-          img.course-thumbnail(src="/images/courses/#{courseId}/#{thumbnail}", alt="")
-  
-    .section
-      .container
-        each section, index in sections
-          .row
-            if  index % 2 === 0
+          img.course-thumbnail(src="/images/courses/#{courseData.id}/#{thumbnail}", alt="")
+
+    each section, index in courseData.sections
+      if index % 2 === 0
+        .section.grey.lighten-5
+          .container
+            .row        
               .col.s6
-                .flex.flex-col
+                .flex.flex-col.v-align-top
                   h3 #{section.title}
                   p #{section.description}
               .col.s6
-                img(src="/images/courses/#{courseId}/#{section.picture}", width="100%")
-            else
+                .course-image-section
+                  img.course-thumbnail(src="/images/courses/#{courseData.id}/#{section.picture}")
+      else
+        .section.grey.lighten-4
+          .container
+            .row
               .col.s6
-                img(src="/images/courses/#{courseId}/#{section.picture}", width="100%")
+                .course-image-section
+                  img.course-thumbnail(src="/images/courses/#{courseData.id}/#{section.picture}")
               .col.s6
-                .flex.flex-col
+                .flex.flex-col.v-align-top
                   h3 #{section.title}
                   p #{section.description}
+        
+  //- include ./includes/sections/campaigns/campaigns
+
+  //- include ./includes/sections/suscribe/suscribe
   
   include ./includes/footer

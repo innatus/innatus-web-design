@@ -48,7 +48,54 @@
   -ms-flex-direction: row-reverse;
   flex-direction: row-reverse; }
 
+.section {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.15); }
+
 .campaign-section {
   background-image: url(/public/images/views/home/header-background.png);
   background-attachment: fixed;
   background-repeat: repeat; }
+
+.course-img {
+  height: 200px;
+  -o-object-fit: cover;
+  object-fit: cover; }
+
+.course-badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 10px 15px;
+  margin: 0;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -ms-flex-align: center;
+  align-items: center; }
+
+.footer-social-icon {
+  padding-left: 10px; }
+
+.teacher-img-container {
+  width: 80%;
+  max-width: 150px;
+  position: relative;
+  margin: auto; }
+
+.teacher-img-container:after {
+  content: "";
+  display: block;
+  padding-bottom: 100%; }
+
+.teacher-img {
+  position: absolute;
+  -o-object-fit: cover;
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0; }
+
+.teacher-social-icon {
+  padding: 0 10px; }
