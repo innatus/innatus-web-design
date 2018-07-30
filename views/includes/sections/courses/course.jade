@@ -19,4 +19,7 @@
         span.sort-hoursForLesson &nbsp;#{course.hoursForLesson}
         | &nbsp;horas
     .card-action
-      a.deep-orange-text(href='/cursos/#{course.id}') Conocer programa
+      if course.isComing
+        a.btn-flat.disabled(href='/cursos/#{course.id}') Conocer programa
+      else
+        a.btn-flat.deep-orange-text(href='/cursos/#{course.id}') Conocer programa
