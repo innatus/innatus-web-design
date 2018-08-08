@@ -23,7 +23,7 @@ block body
       z-index: 2;
     }
     .course-description-container {
-      padding: 5rem 0;
+      padding: 10rem 0;
     }
     .course-description {
       max-width: 900px;
@@ -71,7 +71,7 @@ block body
       .container
         p.grey-text.text-lighten-5 CURSO DE
         h1.grey-text.text-lighten-5 #{courseData.title}
-        a.btn-large.waves-effect.grey.lighten-5.grey-text.text-darken-4 Información de la carrera
+        a.btn-large.waves-effect.grey.lighten-5.grey-text.text-darken-4(href="#info") Información de la carrera
         &nbsp;&nbsp;
         a.btn-large.waves-effect.waves-light.deep-orange.modal-trigger(href='#modalSuscribe') Inscribirse
   .course-description-container.section.grey.lighten-5
@@ -88,18 +88,18 @@ block body
 
     each section, index in courseData.sections
       if index % 2 === 0
-        .section.grey.lighten-5
+        .section.grey.lighten-5.course-section-container
           .container
             .row        
               .col.s6
                 .flex.flex-col.v-align-top
-                  h3 #{section.title}
+                  h3.deep-orange-text #{section.title}
                   p #{section.description}
               .col.s6
                 .course-image-section
                   img.course-thumbnail(src="/images/courses/#{courseData.id}/#{section.picture}")
       else
-        .section.grey.lighten-4
+        .section.grey.lighten-4.course-section-container
           .container
             .row
               .col.s6
@@ -107,38 +107,65 @@ block body
                   img.course-thumbnail(src="/images/courses/#{courseData.id}/#{section.picture}")
               .col.s6
                 .flex.flex-col.v-align-top
-                  h3 #{section.title}
+                  h3.deep-orange-text #{section.title}
                   p #{section.description}
         
-  include ./includes/sections/campaigns/campaigns
-
-  //- include ./includes/sections/suscribe/suscribe
-  #suscribe.section
+  #info.section.campaign-section
     .container
-      h1 Suscribirse
+      h2.grey-text.text-lighten-5.center Información del curso
+      p.grey-text.center Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+      .row
+        .col.s12
+          .card.grey.lighten-5
+            .card-content
+              span.card-title.deep-orange-text.right
+                b $2500
+              span.card-title.grey-text.text-darken-4
+                b #{courseData.title}
+              p.grey-text.text-darken-4 #{courseData.shortDescription}
+            .card-action
+              span.deep-orange-text
+                b Duración: 
+              | #{courseData.quantityLesson} clases (#{courseData.quantityHours}hs / #{courseData.hoursForLesson}hs semanales)
+            .card-action
+              span.deep-orange-text
+                b Modalidad: 
+              | #{courseData.modality}
+            .card-action
+              span.deep-orange-text
+                b Forma de pago: 
+              | En efectivo, en nuestra sede (Lunes a Viernes de 7.30 a 13 y de 14 a 15.30hs), o, mediante transferencia bancaria.
+            .card-action
+              a.btn-large.waves-effect.waves-light.deep-orange.modal-trigger(href='#modalSuscribe') Inscribirse
+              | &nbsp;&nbsp;&nbsp;&nbsp;También podría interesarte:
+              a.btn-flat.waves-effect.grey-text.text-darken-4 Desarrollo Web Back End
+          p.grey-text *Consulta por más promociones y fechas de inicio en nuestra página de 
+            a.grey-text(href='#!') Facebook
+              span.grey-text .
+  
+  include ./includes/sections/campaigns/campaigns
   
   #modalSuscribe.modal
     .modal-content
       h4 ¿Estás interesado en #{courseData.title}?
       p Ya estás un paso más cerca de formar parte de Innatus. ¡Dejanos tus datos y te contactamos para iniciar el proceso de inscripción!
-      
-      .input-field
-        input.validate(id="userCourse", type="hidden", value="#{courseData.id}")
-
-      .input-field
-        input.validate(id="userName", type="text")
-        label(for="userName") Nombre completo
-
-      .input-field
-        input.validate(id="userEmail", type="email")
-        label(for="userEmail") Correo electrónico
-
-      .input-field
-        input.validate(id="userPhone", type="tel")
-        label(for="userPhone") Teléfono
+      br
+      br
+      form(action="https://docs.google.com/forms/d/e/1FAIpQLSdIWghTtuhKGcd1FpS8HKwT4YucSRXTEJ88V5LEb9eNsk8oWw/formResponse", method="post")
+        .input-field
+          input.validate(id="userCourse", type="hidden", value="#{courseData.id}")
+        .input-field
+          input.validate(id="userName", type="text", name="entry.2005620554")
+          label(for="userName") Nombre completo
+        .input-field
+          input.validate(id="userEmail", type="email", name="entry.1045781291")
+          label(for="userEmail") Correo electrónico
+        .input-field
+          input.validate(id="userPhone", type="tel")
+          label(for="userPhone") Teléfono
 
     .modal-footer
-      a.modal-close.waves-effect.waves-green.btn-flat(href='#!') Agree
+      a.modal-close.waves-effect.waves-green.btn-flat(href='#!') Enviar
   
   include ./includes/footer
 
@@ -146,4 +173,15 @@ block body
     document.addEventListener('DOMContentLoaded', () => {
       const element = document.querySelector('#modalSuscribe');
       M.Modal.init(element);
+    });
+
+    const form = 
+    $('#input-form').one('submit',function(){
+        var inputName = encodeURIComponent($('#input-name').val());
+        var baseURL = 'https://docs.google.com/forms/d/18LD6ueL10_lLVAKpDgfmLpUBlzoRFEZSoMod57MXfH0/formResponse?entry.1000000=';
+        var submitRef = '&submit=Submit';
+        var submitURL = (baseURL + inputName + submitRef);
+        console.log(submitURL);
+        $(this)[0].action=submitURL;
+        $('#input-name').addClass('active').val('Thank You!');
     });

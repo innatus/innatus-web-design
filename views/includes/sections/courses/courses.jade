@@ -27,11 +27,8 @@
           include ./course.jade
 
 script.
-  // init Selects
-  const selects = document.querySelectorAll('select');
-  selects.forEach(select => M.FormSelect.init(select));
   // init Isotope
-  const iso = new Isotope('.grid', {
+  const isotope =  $('.grid').isotope({
     itemSelector: '.grid-item',
     layoutMode: 'fitRows',
     getSortData: {
@@ -40,28 +37,13 @@ script.
       'courseName': '.sort-courseName',
     }
   });
-  // bind filter on select change
-  const filterByElement = document.getElementById('filterBy');
-  filterByElement.addEventListener('change', (event) => {
-    const { target } = event;
-    const instance = M.FormSelect.getInstance(target);
-    const values = instance.getSelectedValues();
-    if (values.length === 0) {
-      iso.arrange({ filter: ['*'] });
-    } else {
-      iso.arrange({ filter: values });
-    }
+  // Init FilterBy Select
+  $('#filterBy').formSelect().on('change', () => {
+    const value = $('#filterBy').val();
+    isotope.isotope({ filter: value });
   });
-  // bind order on select change
-  const orderByElement = document.getElementById('orderBy');
-  orderByElement.addEventListener('change', (event) => {
-    const { target } = event;
-    const instance = M.FormSelect.getInstance(target);
-    const values = instance.getSelectedValues();
-    console.log('values: ', values);
-    if (values.length === 0) {
-      iso.arrange({ sortBy: ['*'] });
-    } else {
-      iso.arrange({ sortBy: values });
-    }
+  // Init OrderBy Select
+  $('#orderBy').formSelect().on('change', () => {
+    const value = $('#orderBy').val();
+    isotope.isotope({ sortBy: value });
   });
